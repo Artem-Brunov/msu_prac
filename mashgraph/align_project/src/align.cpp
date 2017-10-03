@@ -9,15 +9,30 @@ Image align(Image srcImage, bool isPostprocessing, std::string postprocessingTyp
 {		
 	int cols = srcImage.n_cols;
 	int rows = srcImage.n_rows;
-
-	Image im_B = srcImage.submatrix(0, 0, rows/3, cols);
-	Image im_G = srcImage.submatrix(rows/3, 0, rows/3, cols);
-	Image im_R = srcImage.submatrix(rows/3*2, 0, rows/3, cols);
 	
-	save_image(im_B, "~/msu_prac/image1.bmp");
-	save_image(im_G, "~/msu_prac/image2.bmp");
- 	save_image(im_R, "~/msu_prac/image3.bmp");
+	int d = 0, s = 0, flag = 0, r = 0, g = 0, b = 0, i = 0, j = 0;
 
+ 	Image im_B = srcImage.submatrix(0, 0, rows/3, cols);
+	Image im_G = srcImage.submatrix(rows/3, 0, rows/3, cols);
+	Image im_R = srcImage.submatrix(2*rows/3, 0, rows/3, cols);
+	
+	save_image(im_B, "../image1.bmp");
+	save_image(im_G, "../image2.bmp");
+ 	save_image(im_R, "../image3.bmp");
+	for(d = -15; d < (rows/3 + 15); d++)
+		for(s = -15; s < (rows/3 + 15); s++)
+		{
+		}
+	for(i = 0; i < rows/3; i++)
+	{
+		for(j = 0; j < cols; j++)
+		{
+			r = std::get<0>(im_R(i,j));
+			g = std::get<1>(im_G(i,j));
+		//	b = std::get<2>(im_B(i,j));
+			srcImage(i,j) = std::make_tuple(r, g, b);
+		}
+	}
     	return srcImage;
 }
 

@@ -6,8 +6,19 @@ using std::cout;
 using std::endl;
 
 Image align(Image srcImage, bool isPostprocessing, std::string postprocessingType, double fraction, bool isMirror, bool isInterp, bool isSubpixel, double subScale)
-{
-    return srcImage;
+{		
+	int cols = srcImage.n_cols;
+	int rows = srcImage.n_rows;
+
+	Image im_B = srcImage.submatrix(0, 0, rows/3, cols);
+	Image im_G = srcImage.submatrix(rows/3, 0, rows/3, cols);
+	Image im_R = srcImage.submatrix(rows/3*2, 0, rows/3, cols);
+	
+	save_image(im_B, "~/msu_prac/image1.bmp");
+	save_image(im_G, "~/msu_prac/image2.bmp");
+ 	save_image(im_R, "~/msu_prac/image3.bmp");
+
+    	return srcImage;
 }
 
 Image sobel_x(Image src_image) {

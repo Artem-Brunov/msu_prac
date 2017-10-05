@@ -21,51 +21,14 @@ double metrikas(Image im_1, Image im_2)
 		}	
 	cout << "Hi";
 	metrika = summa / (rows * cols);
-	cout << metrika << endl;; 
+	cout <<endl<< "metrika"<< metrika << endl;; 
 	return metrika;
 }
 
 void best_shift(Image im_1, Image im_2, int* best_1, int* best_2, int* best_3, int* best_4)
 {
-	int i = 0, j = 0, shift_1 = 15, n = 15, m = 15, shift_2 = 15, shift_3 = 0, shift_4 = 0;
-	int cols = im_1.n_cols;
-        int rows = im_1.n_rows;
-	Image im_3, im_4;
-	double metrika_2 = 0, metrika = 999999;
-	for(i = shift_1; i > -15; i--)
-	{
-		for(j = shift_2; j > -15; j --)
-		{
-			cout << "m" << m << "n" << n;
-			cout << "i"<< i << "j" << j << "cols"<< cols-i << "rows" << rows -j<< endl ;
-			if(j < 1)
-				m = 0;
-			if(i < 1)
-				n = 0;
-			cout << "1" << endl;
 
-			im_3 = im_1.submatrix(n, m, rows - j, cols - i);
-			cout << "1" << endl; 
-			if(i < 1)
-				shift_3++;
-			if(j < 1)
-				shift_4++;
-			im_4 = im_2.submatrix(shift_3, shift_4, rows - j, cols - i);
-			cout << "2"<< endl;
-			metrika_2 = metrikas(im_3, im_4);
 
-			if(metrika_2 < metrika)
-			{
-				*best_1 = n;
-				*best_2 = m;
-				*best_3 = shift_3;
-				*best_4 = shift_4;
-				metrika = metrika_2;
-			}
-			m--;
-		}
-	n--;
-	}
 }
 
 Image combine(Image im_1, Image im_2, int* best_1, int* best_2, int* best_3, int* best_4)

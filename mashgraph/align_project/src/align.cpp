@@ -5,34 +5,107 @@ using std::string;
 using std::cout;
 using std::endl;
 
+double metrikas(Image im_1, Image im_2)
+{
+	int cols = im_1.n_cols;
+        int rows = im_1.n_rows;
+	int i = 0, j = 0, raznost = 0, summa = 0;
+	double metrika;
+	cout << "Hello";
+	for(i = 0; i < rows - 1; i ++)
+		for(j = 0; j < cols - 1; j++)
+		{
+			raznost = static_cast<int>(std::get<0>(im_1(i,j))) - static_cast<int>(std::get<0>(im_2(i,j)));
+			raznost = raznost * raznost;
+			summa = summa + raznost;
+		}	
+	cout << "Hi";
+	metrika = summa / (rows * cols);
+	cout << metrika << endl;; 
+	return metrika;
+}
+
+void best_shift(Image im_1, Image im_2, int* best_1, int* best_2, int* best_3, int* best_4)
+{
+	int i = 0, j = 0, shift_1 = 15, n = 15, m = 15, shift_2 = 15, shift_3 = 0, shift_4 = 0;
+	int cols = im_1.n_cols;
+        int rows = im_1.n_rows;
+	Image im_3, im_4;
+	double metrika_2 = 0, metrika = 999999;
+	for(i = shift_1; i > -15; i--)
+	{
+		for(j = shift_2; j > -15; j --)
+		{
+			cout << "m" << m << "n" << n;
+			cout << "i"<< i << "j" << j << "cols"<< cols-i << "rows" << rows -j<< endl ;
+			if(j < 1)
+				m = 0;
+			if(i < 1)
+				n = 0;
+			cout << "1" << endl;
+
+			im_3 = im_1.submatrix(n, m, rows - j, cols - i);
+			cout << "1" << endl; 
+			if(i < 1)
+				shift_3++;
+			if(j < 1)
+				shift_4++;
+			im_4 = im_2.submatrix(shift_3, shift_4, rows - j, cols - i);
+			cout << "2"<< endl;
+			metrika_2 = metrikas(im_3, im_4);
+
+			if(metrika_2 < metrika)
+			{
+				*best_1 = n;
+				*best_2 = m;
+				*best_3 = shift_3;
+				*best_4 = shift_4;
+				metrika = metrika_2;
+			}
+			m--;
+		}
+	n--;
+	}
+}
+
+Image combine(Image im_1, Image im_2, int* best_1, int* best_2, int* best_3, int* best_4)
+{
+		int cols = im_1.n_cols;
+        	int rows = im_1.n_rows;
+
+		int i = 0, j = 0, r = 0, m = 0, n = 0, q = 0, w = 0, g = 0, b = 0;
+
+		for(m = *best_1, n = *best_3, i = 0; i < rows ; m++, n++, i++)
+		{
+               		for(q = *best_2, w = *best_4, j = 0; j < cols; q++, w++, j++)
+                	{
+                        	r = std::get<0>(im_1(m, q));
+                        	g = std::get<1>(im_2(n, w));
+                        	b = std::get<2>(im_1(i,j));
+                        	im_1(i,j) = std::make_tuple(r, g, b);
+                	}	
+        	}
+		return im_1;	
+}
+
 Image align(Image srcImage, bool isPostprocessing, std::string postprocessingType, double fraction, bool isMirror, bool isInterp, bool isSubpixel, double subScale)
 {		
 	int cols = srcImage.n_cols;
-	int rows = srcImage.n_rows;
-	
-	int d = 0, s = 0, flag = 0, r = 0, g = 0, b = 0, i = 0, j = 0;
+	int rows = (srcImage.n_rows / 3);
 
- 	Image im_B = srcImage.submatrix(0, 0, rows/3, cols);
-	Image im_G = srcImage.submatrix(rows/3, 0, rows/3, cols);
-	Image im_R = srcImage.submatrix(2*rows/3, 0, rows/3, cols);
+	cout << cols << endl<< rows << endl;	
+	int best_1 = 0, best_2 = 0, best_3 = 0, best_4 = 0;
+ 	
+	Image im_B = srcImage.submatrix(0, 0, rows, cols);
+	Image im_G = srcImage.submatrix(rows/3, 0, rows, cols);
+	Image im_R = srcImage.submatrix(2*rows/3, 0, rows, cols);
 	
-	save_image(im_B, "../image1.bmp");
-	save_image(im_G, "../image2.bmp");
- 	save_image(im_R, "../image3.bmp");
-	for(d = -15; d < (rows/3 + 15); d++)
-		for(s = -15; s < (rows/3 + 15); s++)
-		{
-		}
-	for(i = 0; i < rows/3; i++)
-	{
-		for(j = 0; j < cols; j++)
-		{
-			r = std::get<0>(im_R(i,j));
-			g = std::get<1>(im_G(i,j));
-		//	b = std::get<2>(im_B(i,j));
-			srcImage(i,j) = std::make_tuple(r, g, b);
-		}
-	}
+	best_shift(im_R, im_G, &best_1, &best_2, &best_3, &best_4);
+	im_R = combine(im_R, im_G, &best_1, &best_2, &best_3, &best_4);
+
+	srcImage = im_R;
+//	printf("%d \n%d \n%p \n%p \n%p \n%p \n %d\n",shift_1, shift_2, best_1, best_2, best_3, best_4, metrika);
+
     	return srcImage;
 }
 

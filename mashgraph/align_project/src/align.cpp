@@ -52,7 +52,6 @@ void best_shift(Image im_1, Image im_2, int* best_1, int* best_2, int* best_3, i
 		q = 15;
 		m = 15;
 		e = 0;
-		cout << "i"<< i<<endl; 
 		for(j = 30; j > -1; j--)
 		{
 			im_3 = im_1.submatrix(p, q, rows - n, cols - m);
@@ -126,7 +125,6 @@ Image combine(Image im_1, Image im_2, int* best_1, int* best_2, int* best_3, int
 					b = std::get<2>(im_2(n,w));			                                im_1(i,j) = std::make_tuple(r, g, b);
 
 				}
-	                        cout << "flag"<<flag<<endl;
                 	}	
         	}
 		return im_1;	
@@ -142,16 +140,16 @@ Image align(Image srcImage, bool isPostprocessing, std::string postprocessingTyp
 	Image im_B = srcImage.submatrix(0, 0, rows/3, cols);
 	Image im_G = srcImage.submatrix(rows/3, 0, rows/3, cols);
 	Image im_R = srcImage.submatrix(2*rows/3, 0, rows/3, cols);
-	cout << "qq" << endl; 	
+	
 	best_shift(im_R, im_G, &best_1, &best_2, &best_3, &best_4);
 	im_R = combine(im_R, im_G, &best_1, &best_2, &best_3, &best_4, flag);
-	     best_shift(im_R, im_B, &best_1, &best_2, &best_3, &best_4);
+	
+	best_shift(im_R, im_B, &best_1, &best_2, &best_3, &best_4);
 	flag = 0;
         im_R = combine(im_R, im_B, &best_1, &best_2, &best_3, &best_4, flag);
 
 	srcImage = im_R;
-//	printf("%d \n%d \n%p \n%p \n%p \n%p \n %d\n",shift_1, shift_2, best_1, best_2, best_3, best_4, metrika);
-
+	gray_world(srcImage);
     	return srcImage;
 }
 
@@ -174,11 +172,62 @@ Image unsharp(Image src_image) {
 }
 
 Image gray_world(Image src_image) {
-    return src_image;
+	
+	int cols = src_image.n_cols;
+        int rows = src_image.n_rows;
+
+	int r = 0, g = 0, b = 0;
+	double i = 0, j = 0, sum = 0, sum_r = 0, sum_g = 0, sum_b = 0;
+	for(i = 0; i < rows; i++)
+		for(j = 0; j < cols; j++)
+		{
+			r = std::get<0>(src_image(i, j));
+			g = std::get<1>(src_image(i, j));
+        		b = std::get<2>(src_image(i, j));
+			
+			sum_r = sum_r + r;
+			sum_g = sum_g + g;
+			sum_b = sum_b + b;
+		}
+	sum_r = sum_r/(rows * cols);
+	sum_b = sum_b/(rows * cols);
+	sum_g = sum_g/(rows * cols);
+	
+	sum = (sum_r + sum_g + sum_b) / 3;
+	
+	sum_r = sum / sum_r;
+	sum_g = sum / sum_g;
+	sum_b = sum / sum_b;
+
+	for(i = 0; i < rows; i++)
+                for(j = 0; j < cols; j++)
+                {       
+                        r = std::get<0>(src_image(i, j));
+                        g = std::get<1>(src_image(i, j));
+                        b = std::get<2>(src_image(i, j)); 
+
+			r = r * sum_r;
+			g = g * sum_g;
+			b = b * sum_b;
+			
+			if(r > 255)
+				r = 255;
+			if(g > 255)
+				g = 255;
+			if(b > 255)
+				b = 255;
+			src_image(i,j) = std::make_tuple(r, g, b);
+
+                }
+
+    	return src_image;
 }
 
 Image resize(Image src_image, double scale) {
-    return src_image;
+	
+//	srcImage.n_cols = srcImage.n_cols * scale;
+//	srcImage.n_rows = srcImage.n_rows * scale;
+	return src_image;
 }
 
 Image custom(Image src_image, Matrix<double> kernel) {

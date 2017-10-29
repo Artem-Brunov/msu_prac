@@ -130,13 +130,12 @@ Image combine(Image im_1, Image im_2, int* best_1, int* best_2, int* best_3, int
 		return im_1;	
 }
 
-Image align(Image srcImage, bool isPostprocessing, std::string postprocessingType, double fraction, bool isMirror, bool isInterp, bool isSubpixel, double subScale)
+Image align(Image srcImage)
 {		
 	int cols = srcImage.n_cols;
 	int rows = srcImage.n_rows;
-
 	int best_1 = 0, best_2 = 0, best_3 = 0, best_4 = 0, flag = 1;
- 	
+	
 	Image im_B = srcImage.submatrix(0, 0, rows/3, cols);
 	Image im_G = srcImage.submatrix(rows/3, 0, rows/3, cols);
 	Image im_R = srcImage.submatrix(2*rows/3, 0, rows/3, cols);
@@ -149,7 +148,6 @@ Image align(Image srcImage, bool isPostprocessing, std::string postprocessingTyp
         im_R = combine(im_R, im_B, &best_1, &best_2, &best_3, &best_4, flag);
 
 	srcImage = im_R;
-	gray_world(srcImage);
     	return srcImage;
 }
 
@@ -168,14 +166,62 @@ Image sobel_y(Image src_image) {
 }
 
 Image unsharp(Image src_image) {
-    return src_image;
+    	
+	Matrix<double> growing = { {-(1/6.0), -(2/3.0), -(1/6.0)},
+                             	 {-(2/3.0), (13/3.0), -(2/3.0)},
+				 {-(1/6.0), -(2/3.0), -(1/6.0)}};
+	int cols = src_image.n_cols;
+        int rows = src_image.n_rows;
+	
+	cout << growing(0,0);
+	int size = 2;
+	double r, g, b, sum_r = 0.0, sum_g = 0.0, sum_b = 0.0;
+	Image image = src_image.submatrix(1, 1, rows - 1, cols - 1);
+
+	for(int i = 1; i < rows - 1; i++)
+		for(int j = 1; j < cols - 1; j++)
+		{
+			for(int p = -1; p < size; p++)
+			{
+				for(int q = -1; q < size; q++)
+				{
+					r = std::get<0>(src_image(i + p, j + q));
+                        		g = std::get<1>(src_image(i + p, j + q));
+                        		b = std::get<2>(src_image(i + p, j + q));
+		
+					sum_r = sum_r + r * growing(p + 1, q + 1);
+					sum_g = sum_g + g * growing(p + 1, q + 1);
+					sum_b = sum_b + b * growing(p + 1, q + 1);
+	
+				}
+			}	
+			if(sum_r > 255)
+                        	sum_r = 255;
+                        if(sum_g > 255)
+                        	sum_g = 255;
+                        if(sum_b > 255)
+                              	sum_b = 255;
+
+                        if(sum_r < 0)
+                               	sum_r = 0;
+                        if(sum_g < 0)
+                               	sum_g = 0;
+                        if(sum_b < 0)
+                               	sum_b = 0;
+			image((i-1),(j-1)) = std::make_tuple(sum_r, sum_g, sum_b);
+			sum_r = 0.0;
+			sum_b = 0.0;
+			sum_g = 0.0;
+		}
+		
+	return image;
 }
 
 Image gray_world(Image src_image) {
 	
 	int cols = src_image.n_cols;
         int rows = src_image.n_rows;
-
+	
 	int r = 0, g = 0, b = 0;
 	double i = 0, j = 0, sum = 0, sum_r = 0, sum_g = 0, sum_b = 0;
 	for(i = 0; i < rows; i++)
@@ -224,10 +270,54 @@ Image gray_world(Image src_image) {
 }
 
 Image resize(Image src_image, double scale) {
+
+	int cols = src_image.n_cols * scale;
+        int rows = src_image.n_rows * scale;
 	
-//	srcImage.n_cols = srcImage.n_cols * scale;
-//	srcImage.n_rows = srcImage.n_rows * scale;
-	return src_image;
+	Image image = Image(rows, cols);
+	double dx = 0.0, dy = 0.0, r = 0.0, b = 0.0, g = 0.0;
+	int i = 0, j = 0, I = 0, J = 0;
+
+	for(i = 0; i < rows  - 2; i++)
+		for(j = 0; j < cols - 2 ; j++)
+		{
+			I = i / scale;
+			J = j / scale;
+			dx = j / scale - J;
+			dy = i / scale - I;
+			
+			r = (1 - dx) * (1 - dy) * std::get<0>(src_image(I, J))+
+				dx * (1 - dy) * std::get<0>(src_image(I, J + 1)) + 
+				(1 - dx) * dy * std::get<0>(src_image(I + 1, J)) + 
+				dx * dy * std::get<0>(src_image(I + 1, J + 1));
+                	g = (1 - dx) * (1 - dy) * std::get<1>(src_image(I, J)) + 
+                                dx * (1 - dy) * std::get<1>(src_image(I, J + 1)) + 
+                                (1 - dx) * dy * std::get<1>(src_image(I + 1, J)) + 
+                                dx * dy * std::get<1>(src_image(I + 1, J + 1));
+			b = (1 - dx) * (1 - dy) * std::get<2>(src_image(I, J)) + 
+                                dx * (1 - dy) * std::get<2>(src_image(I, J + 1)) + 
+                                (1 - dx) * dy * std::get<2>(src_image(I + 1, J)) + 
+                                dx * dy * std::get<2>(src_image(I + 1, J + 1));
+			
+			if(r > 255)
+                                r = 255;
+                        if(g > 255)
+                                g = 255;
+                        if(b > 255)
+                                b = 255;
+
+                        if(r < 0)
+                                r = 0;
+                        if(g < 0)
+                                g = 0;
+                        if(b < 0)
+                                b = 0;
+
+ 			image(i, j) = std::make_tuple(r, g, b);
+
+		}	
+
+	return image;
 }
 
 Image custom(Image src_image, Matrix<double> kernel) {
@@ -239,7 +329,54 @@ Image custom(Image src_image, Matrix<double> kernel) {
 }
 
 Image autocontrast(Image src_image, double fraction) {
-    return src_image;
+	double max_I = 0, min_I = 255, I = 0, r, g, b;
+	int i = 0, j = 0;
+
+	int cols = src_image.n_cols;
+        int rows = src_image.n_rows;
+
+	
+	for(i = 0; i < rows; i++)
+		for(j = 0; j < cols; j++)
+		{
+			r = std::get<0>(src_image(i, j));
+                        g = std::get<1>(src_image(i, j));
+                        b = std::get<2>(src_image(i, j));
+	
+			I = 0.2125 * r + 0.7154 * g + 0.0721 * b;
+			if(I < min_I)
+				min_I = I;
+			if(I > max_I)
+				max_I = I;
+		}
+	 for(i = 0; i < rows; i++)
+                for(j = 0; j < cols; j++)
+                {
+                        r = std::get<0>(src_image(i, j));
+                        g = std::get<1>(src_image(i, j));
+                        b = std::get<2>(src_image(i, j));
+			
+			r = ((r - min_I) * 255) / (max_I - min_I);	
+	                g = ((g - min_I) * 255) / (max_I - min_I);
+                        b = ((b - min_I) * 255) / (max_I - min_I);
+	
+		        if(r > 255)
+                                r = 255;
+                        if(g > 255)
+                                g = 255;
+                        if(b > 255)
+                                b = 255;
+			
+                        if(r < 0)
+                                r = 0;
+                        if(g < 0)
+                                g = 0;
+                        if(b < 0)
+                                b = 0;
+
+			src_image(i,j) = std::make_tuple(r, g, b);
+		}
+	return src_image;
 }
 
 Image gaussian(Image src_image, double sigma, int radius)  {
@@ -265,3 +402,5 @@ Image median_const(Image src_image, int radius) {
 Image canny(Image src_image, int threshold1, int threshold2) {
     return src_image;
 }
+
+

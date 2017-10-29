@@ -1,26 +1,10 @@
 A = list(eval(input()))
 
-i = 0
-sum = 0
-while 1:
-	if len(A) <= 2:
-		sum += A[len(A) - 1]
-		break;
-	if len(A) == 3:
-		if A[0] > A[1]:
-			sum += A[1] + A[2]
-			break
-		else:
-			sum += A[0] + A[2]
-			break
+B = []
+B.append(A[0])
+B.append(A[1])
+for i in range(2, len(A)):
+	B.append(min(B[i-1], B[i-2]) + A[i])
 
-	if A[i] + A[i+2] <= A[i+1]:
-		sum += A[i]
-		i+=1
-	else:
-		sum += A[i+1]
-		i+=2
-	if len(A) - 2 <= i:
-		sum += A[len(A) - 1]
-		break
-print(sum)
+print(B[len(B) - 1])
+

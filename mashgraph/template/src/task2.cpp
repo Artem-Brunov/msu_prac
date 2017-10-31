@@ -31,6 +31,7 @@ typedef vector<pair<vector<float>, int> > TFeatures;
 
 Matrix<float> GrayScale(BMP image)
 {
+
 	int i,j = 0;
 	int height = image.TellHeight();
 	int width = image.TellWidth();
@@ -43,7 +44,6 @@ Matrix<float> GrayScale(BMP image)
 			pixel = image.GetPixel(j,i);	
 			ansver(i,j) = 0.299 * pixel.Red + 0.587 * pixel.Green + 0.114 * pixel.Blue;
 		}
-
 	return ansver;
 }
 
@@ -62,6 +62,7 @@ Matrix<float> Sobel_y(BMP image)
 				m_sobel(1,0) * buffer(i+1,j) + m_sobel(1,1) * buffer(i+1,j+1) + m_sobel(1,2) * buffer(i+1,j+2) +
 				m_sobel(2,0) * buffer(i+2,j) + m_sobel(2,1) * buffer(i+2,j+1) + m_sobel(2,2) * buffer(i+2,j+2); 
 		}
+
 	return ansver;
 }
 
@@ -80,7 +81,145 @@ Matrix<float> Sobel_x(BMP image)
                                 m_sobel(1,0) * buffer(i+1,j) + m_sobel(1,1) * buffer(i+1,j+1) + m_sobel(1,2) * buffer(i+1,j+2) +
                                 m_sobel(2,0) * buffer(i+2,j) + m_sobel(2,1) * buffer(i+2,j+1) + m_sobel(2,2) * buffer(i+2,j+2);
                 }
+
         return ansver;
+}
+
+Matrix<float> ModulGrad(BMP image)
+{
+	Matrix<float> sobel_x = Sobel_x(image);
+	Matrix<float> sobel_y = Sobel_y(image);
+	
+	int height = image.TellHeight();
+        int width = image.TellWidth();
+       
+	Matrix<float> ansver = Matrix<float>(height, width);
+
+	for(int i = 0; i < height; i++)
+		for(int j = 0; j < width; j++)
+		{
+			ansver(i,j) = sqrt(sobel_x(i,j) * sobel_x(i,j) + sobel_y(i,j) * sobel_y(i,j));
+		}
+
+	return ansver;
+}
+
+Matrix<float> DirectionGrad(BMP image)
+{
+        Matrix<float> sobel_x = Sobel_x(image);
+        Matrix<float> sobel_y = Sobel_y(image);
+
+        int height = image.TellHeight();
+        int width = image.TellWidth();
+
+        Matrix<float> ansver = Matrix<float>(height, width);
+
+        for(int i = 0; i < height; i++)
+                for(int j = 0; j < width; j++)
+                {
+                        ansver(i,j) = atan2(sobel_y(i,j), sobel_x(i,j));
+                }
+
+        return ansver;
+}
+
+std::vector<float> Gistogramma(int i, int j, Matrix<float> modul , Matrix<float> direction)
+{
+	
+	int i_gis = i + 8;
+	int j_gis = j + 8;
+	float summ_vect = 0.0, sq = 0.0;
+	std::vector<float> vector = {0,0,0,0,0,0,0,0};
+	
+	for(i = i; i < i_gis; i++)
+		for(j = j; j < j_gis; j++)
+		{
+			if(direction(i,j) >= -M_PI && direction(i,j) < -3*(M_PI_4))
+			{
+				vector[0] = vector[0] + modul(i,j);
+			 	continue;
+			}
+			if(direction(i,j) >= -3*(M_PI_4) && direction(i,j) < -M_PI_2)
+                        {
+                                vector[1] = vector[1] + modul(i,j);
+                        	continue;
+			}
+			if(direction(i,j) >= -M_PI_2 && direction(i,j) < -M_PI_4)
+                        {
+                                vector[2] = vector[2] + modul(i,j);
+                        	continue;
+			}
+			if(direction(i,j) >= -M_PI_4 && direction(i,j) < 0)
+                        {
+                                vector[3] = vector[3] + modul(i,j);
+                        	continue;
+			}
+ 			if(direction(i,j) >= 0 && direction(i,j) < M_PI_4)
+                        {
+                                vector[4] = vector[4] + modul(i,j);
+                        	continue;
+			}
+ 			if(direction(i,j) >= M_PI_4 && direction(i,j) < 3*(M_PI_4))
+                        {
+                                vector[5] = vector[5] + modul(i,j);
+				continue;
+
+                        }
+ 			if(direction(i,j) >= 3*(M_PI_4) && direction(i,j) < M_PI_2)
+                        {
+                                vector[6] = vector[6] + modul(i,j);
+				continue;
+                        }
+			if(direction(i,j) >= M_PI_2 && direction(i,j) <= M_PI)
+                        {
+                                vector[7] = vector[7] + modul(i,j);
+                        }
+		}
+		for(i = 0; i < 8; i++)
+		{
+			sq = vector[i] * vector[i];
+			summ_vect = summ_vect + sq;
+		}
+		
+		summ_vect = sqrt(summ_vect);
+		
+		for(i = 0; i < 8; i++)
+		{
+			vector[i] = vector[i] / summ_vect;
+			if(std::isnan(vector[i]))
+				vector[i] = 0;
+		}
+
+	return vector;
+}
+
+std::vector<float> Concatination(BMP image)
+{
+	Matrix<float> modul = ModulGrad(image);
+        Matrix<float> direction = DirectionGrad(image);
+
+
+	int height = image.TellHeight();
+        int width = image.TellWidth();
+	int i, j;
+	uint  p = 0;
+	std::vector<float> vector = std::vector<float>(0);
+	std::vector<float> concat = std::vector<float>(0);
+	
+	for(i = 0; i < height - 8; i = i + 8)
+		for(j = 0; j < width - 8; j = j + 8)
+		{
+			vector = Gistogramma(i, j, modul, direction);
+			
+			while(p < vector.size())
+			{
+				concat.push_back(vector[p]);
+				p++;
+			}
+			p = 0;
+		}
+
+	return concat;
 }
 
 void LoadFileList(const string& data_file, TFileList* file_list) {
@@ -138,9 +277,9 @@ void ExtractFeatures(const TDataSet& data_set, TFeatures* features) {
         
         // PLACE YOUR CODE HERE
         // Remove this sample code and place your feature extraction code here
-        vector<float> one_image_features;
-        one_image_features.push_back(1.0);
-        features->push_back(make_pair(one_image_features, 1));
+
+        vector<float> one_image_features = Concatination(*std::get<0>(data_set[image_idx]));
+        features->push_back(make_pair(one_image_features, std::get<1>(data_set[image_idx])));
         // End of sample code
 
     }

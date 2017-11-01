@@ -28,23 +28,180 @@ typedef vector<pair<vector<float>, int> > TFeatures;
 
 // Load list of files and its labels from 'data_file' and
 // stores it in 'file_list'
-
 Matrix<float> GrayScale(BMP image)
 {
 
-	int i,j = 0;
-	int height = image.TellHeight();
-	int width = image.TellWidth();
-	RGBApixel pixel;
-	Matrix<float> ansver = Matrix<float>(height, width);
+        int i,j = 0;
+        int height = image.TellHeight();
+        int width = image.TellWidth();
+        RGBApixel pixel;
+        Matrix<float> ansver = Matrix<float>(height, width);
 
-	for(i = 0; i < height; i++)
-		for(j = 0; j < width; j++)
+        for(i = 0; i < height; i++)
+                for(j = 0; j < width; j++)
+                {
+                        pixel = image.GetPixel(j,i);
+                        ansver(i,j) = 0.299 * pixel.Red + 0.587 * pixel.Green + 0.114 * pixel.Blue;
+                }
+        return ansver;
+}
+
+std::vector<float> Bonus_1_blok(BMP image, Matrix<float> matr, int i, int j)
+{
+	int height = image.TellHeight();
+        int width = image.TellWidth();
+        int i_gis = i + height/8;
+        int j_gis = j + width/8;
+
+        int summ = 0, norma = 0;
+	int p = 0;
+        std::vector<float> vector = std::vector<float>(0);
+	while(p < 256)
+	{
+		vector.push_back(0);
+		p++;
+	}
+        for(i = i; i < i_gis; i++)
+        {
+
+		if(i == height)
+			break;
+
+                for(j = j; j < j_gis; j++)
 		{
-			pixel = image.GetPixel(j,i);	
-			ansver(i,j) = 0.299 * pixel.Red + 0.587 * pixel.Green + 0.114 * pixel.Blue;
+			if(j == width)
+				break;
+			if(matr(i+1,j+1) > matr(i,j))
+				summ = summ + pow(2,7);
+			if(matr(i+1,j+1) > matr(i,j+1))
+				summ = summ + pow(2,6);
+			if(matr(i+1,j+1) > matr(i,j+2))
+				summ = summ + pow(2,5);
+			if(matr(i+1,j+1) > matr(i+1,j+2))
+				summ = summ + pow(2,4);
+			if(matr(i+1,j+1) > matr(i+2,j+2))
+				summ = summ + pow(2,3);
+			if(matr(i+1,j+1) > matr(i+2,j+1))
+				summ = summ + pow(2,2);
+			if(matr(i+1,j+1) > matr(i+2,j))
+				summ = summ + pow(2,1);
+			if(matr(i+1,j+1) > matr(i+1,j))
+				summ = summ + pow(2,0);
+			vector[summ]++;
+			summ = 0;	
+
 		}
-	return ansver;
+	}
+	p = 0;
+	while(p < 256)
+        {
+                norma = norma + vector[p] * vector[p];
+                p++;
+        }
+	norma = sqrt(norma);
+	p = 0;
+	while(p < 256)
+        {
+               vector[p] = vector[p] / norma;
+                p++;
+        }
+	return vector;
+
+}
+
+std::vector<float> Bonus_1(BMP image, Matrix<float> ansver)
+{
+	int height = image.TellHeight();
+        int width = image.TellWidth();
+        int i, j;
+        uint  p = 0;
+	
+
+        std::vector<float> vector = std::vector<float>(0);
+        std::vector<float> concat = std::vector<float>(0);
+
+        for(i = 0; i < height; i = i + height/8)
+                for(j = 0; j < width; j = j + width/8)
+                {
+                        vector = Bonus_1_blok(image, ansver, i, j);
+
+                        while(p < vector.size())
+                        {
+                                concat.push_back(vector[p]);
+                                p++;
+                        }
+                        p = 0;
+
+                }
+        return concat;
+
+}
+
+std::vector<float> Bonus_blok(BMP image, int i, int j)
+{
+        int height = image.TellHeight();
+        int width = image.TellWidth();
+
+	int i_gis = i + height/8;
+        int j_gis = j + width/8;
+
+	int count = 0;
+        float r = 0.0, g = 0.0, b = 0.0;
+        std::vector<float> vector = {0,0,0};
+	RGBApixel pixel;
+
+        for(i = i; i < i_gis; i++)
+	{	
+                for(j = j; j < j_gis; j++)
+		{
+			pixel = image.GetPixel(j,i);
+			r = r + pixel.Red;
+			g = g + pixel.Green;
+			b = b + pixel.Blue;
+			count++;
+			if(j == width - 1)
+				break;
+		}
+		
+		if(i == height - 1)
+			break;
+	}
+	r = r/count;
+	g = g/count;
+	b = b/count;
+
+	r = r/255;
+	g = g/255;
+	b = b/255;
+	vector = {r,g,b};
+	return vector;
+}
+
+std::vector<float> Bonus_2(BMP image)
+{
+        int height = image.TellHeight();
+        int width = image.TellWidth();
+        int i, j, c = 0;
+        uint  p = 0;
+
+        std::vector<float> vector = std::vector<float>(0);
+        std::vector<float> concat = std::vector<float>(0);
+
+        for(i = 0; i < height; i = i + height/8)
+                for(j = 0; j < width; j = j + width/8)
+                {
+			c++;
+                        vector = Bonus_blok(image, i, j);
+
+                        while(p < vector.size())
+                        {
+                                concat.push_back(vector[p]);
+                                p++;
+                        }
+                        p = 0;
+
+                }
+        return concat;
 }
 
 Matrix<float> Sobel_y(BMP image)
@@ -123,17 +280,22 @@ Matrix<float> DirectionGrad(BMP image)
         return ansver;
 }
 
-std::vector<float> Gistogramma(int i, int j, Matrix<float> modul , Matrix<float> direction)
+std::vector<float> Gistogramma(BMP image, int i, int j, Matrix<float> modul , Matrix<float> direction)
 {
-	
+	int height = image.TellHeight();
+        int width = image.TellWidth();
+
 	int i_gis = i + 8;
 	int j_gis = j + 8;
 	float summ_vect = 0.0, sq = 0.0;
 	std::vector<float> vector = {0,0,0,0,0,0,0,0};
 	
 	for(i = i; i < i_gis; i++)
+	{
 		for(j = j; j < j_gis; j++)
 		{
+			if(j == width)
+				break;
 			if(direction(i,j) >= -M_PI && direction(i,j) < -3*(M_PI_4))
 			{
 				vector[0] = vector[0] + modul(i,j);
@@ -174,21 +336,25 @@ std::vector<float> Gistogramma(int i, int j, Matrix<float> modul , Matrix<float>
                         {
                                 vector[7] = vector[7] + modul(i,j);
                         }
+			
 		}
-		for(i = 0; i < 8; i++)
-		{
-			sq = vector[i] * vector[i];
-			summ_vect = summ_vect + sq;
-		}
+		if(i == height - 1)
+			break;
+	}
+	for(i = 0; i < 8; i++)
+	{
+		sq = vector[i] * vector[i];
+		summ_vect = summ_vect + sq;
+	}
 		
-		summ_vect = sqrt(summ_vect);
+	summ_vect = sqrt(summ_vect);
 		
-		for(i = 0; i < 8; i++)
-		{
-			vector[i] = vector[i] / summ_vect;
-			if(std::isnan(vector[i]))
-				vector[i] = 0;
-		}
+	for(i = 0; i < 8; i++)
+	{
+		vector[i] = vector[i] / summ_vect;
+		if(std::isnan(vector[i]))
+			vector[i] = 0;
+	}
 
 	return vector;
 }
@@ -205,11 +371,16 @@ std::vector<float> Concatination(BMP image)
 	uint  p = 0;
 	std::vector<float> vector = std::vector<float>(0);
 	std::vector<float> concat = std::vector<float>(0);
-	
-	for(i = 0; i < height - 8; i = i + 8)
-		for(j = 0; j < width - 8; j = j + 8)
+        std::vector<float> bonus_concat = std::vector<float>(0);
+	std::vector<float> bonus_1_concat = std::vector<float>(0);
+
+        Matrix<float> buff = GrayScale(image);
+        Matrix<float> ansver = buff.extra_borders(1,1);
+
+	for(i = 0; i < height; i = i + 8)
+		for(j = 0; j < width; j = j + 8)
 		{
-			vector = Gistogramma(i, j, modul, direction);
+			vector = Gistogramma(image, i, j, modul, direction);
 			
 			while(p < vector.size())
 			{
@@ -218,6 +389,22 @@ std::vector<float> Concatination(BMP image)
 			}
 			p = 0;
 		}
+	
+	bonus_concat = Bonus_2(image);
+	bonus_1_concat = Bonus_1(image, ansver);
+	
+	p = 0;
+        while(p < bonus_concat.size())
+        {
+                concat.push_back(bonus_concat[p]);
+                p++;
+        }
+	p = 0;
+        while(p < bonus_1_concat.size())
+        {
+                concat.push_back(bonus_1_concat[p]);
+                p++;
+        }
 
 	return concat;
 }

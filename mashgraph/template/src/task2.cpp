@@ -28,6 +28,10 @@ typedef vector<pair<vector<float>, int> > TFeatures;
 
 // Load list of files and its labels from 'data_file' and
 // stores it in 'file_list'
+
+
+
+
 Matrix<float> GrayScale(BMP image)
 {
 
@@ -210,7 +214,7 @@ Matrix<float> Sobel_y(BMP image)
 	Matrix<float> buffer = ansver.extra_borders(1,1);
 	int height = image.TellHeight();
 	int width = image.TellWidth();
-	Matrix<float> m_sobel = {{-1,0,1}, {-2,0,2}, {-1,0,1}};
+	Matrix<float> m_sobel = {{-1,-2,-1}, {0,0,0}, {1,2,1}};
 	
 	for(int i = 0; i < height; i++)
 		for(int j = 0; j < width; j++)
@@ -229,7 +233,7 @@ Matrix<float> Sobel_x(BMP image)
         Matrix<float> buffer = ansver.extra_borders(1,1);
         int height = image.TellHeight();
         int width = image.TellWidth();
-        Matrix<float> m_sobel = {{1,-2,1}, {0,0,0}, {1,-2,1}};
+        Matrix<float> m_sobel = {{-1,0,1}, {-2,0,2}, {-1,0,1}};
 
         for(int i = 0; i < height; i++)
                 for(int j = 0; j < width; j++)
@@ -242,6 +246,91 @@ Matrix<float> Sobel_x(BMP image)
         return ansver;
 }
 
+				/* WITH SSE
+
+Matrix<float> Sobel_y(BMP image)
+{
+        Matrix<float> ansver = GrayScale(image);
+        Matrix<float> buffer = ansver.extra_borders(1,1);
+        int height = image.TellHeight();
+        int width = image.TellWidth();
+        Matrix<float> m_sobel = {{-1,-2,-1}, {0,0,0}, {1,2,1}};
+
+        __m128 m1, m2, m3, m4;
+	float summ[4];
+
+	m1 = _mm_setr_ps(m_sobel(0,0), m_sobel(0,1), m_sobel(0,2), m_sobel(2,0));
+        m2 = _mm_setr_ps(m_sobel(2,1), m_sobel(2,2), 0, 0);
+
+        for(int i = 0; i < height; i++)
+                for(int j = 0; j < width; j++)
+                {
+			m3 = _mm_setr_ps(buffer(i,j), buffer(i,j+1), buffer(i,j+2), buffer(i+2,j));
+                        m4 = _mm_setr_ps(buffer(i+2,j+1), buffer(i+2,j+2), 0, 0);
+
+                        m3 = _mm_mul_ps(m3, m1);
+                        m4 = _mm_mul_ps(m4, m2);
+                        m4 = _mm_add_ps(m3,m4);
+			_mm_store_ps(summ, m4);
+                        ansver(i,j) = summ[0] + summ[1] + summ[2] + summ[3];
+                }
+
+        return ansver;
+}
+
+Matrix<float> Sobel_x(BMP image)
+{
+        Matrix<float> ansver = GrayScale(image);
+        Matrix<float> buffer = ansver.extra_borders(1,1);
+        int height = image.TellHeight();
+        int width = image.TellWidth();
+        Matrix<float> m_sobel = {{-1,0,1}, {-2,0,2}, {-1,0,1}};
+	__m128 m1, m2, m3, m4;
+	float summ[4];
+	m1 = _mm_setr_ps(m_sobel(0,0), m_sobel(0,2), m_sobel(1,0), m_sobel(1,2));
+        m2 = _mm_setr_ps(m_sobel(2,0), m_sobel(2,2), 0, 0);
+	
+
+        for(int i = 0; i < height; i++)
+                for(int j = 0; j < width; j++)
+                {
+			m3 = _mm_setr_ps(buffer(i,j), buffer(i,j+2), buffer(i+1,j), buffer(i+1,j+2));
+			m4 = _mm_setr_ps(buffer(i+2,j), buffer(i+2,j+2), 0, 0);
+			
+			m3 = _mm_mul_ps(m3, m1);
+			m4 = _mm_mul_ps(m4, m2);
+                        m4 = _mm_add_ps(m3,m4);
+			_mm_store_ps(summ, m4);
+			ansver(i,j) = summ[0] + summ[1] + summ[2] + summ[3];
+                }
+
+        return ansver;
+}
+
+Matrix<float> ModulGrad(BMP image)
+{
+        Matrix<float> sobel_x = Sobel_x(image);
+        Matrix<float> sobel_y = Sobel_y(image);
+        
+        int height = image.TellHeight();
+        int width = image.TellWidth();
+       
+        Matrix<float> ansver = Matrix<float>(height, width);
+	__m128 m1, m2;
+	float summ[4];
+        for(int i = 0; i < height; i++)
+                for(int j = 0; j < width; j++)
+                {
+			m1 = _mm_setr_ps(sobel_x(i,j), sobel_y(i,j), 0, 0);
+			m2 = _mm_mul_ps(m1,m1);
+			_mm_store_ps(summ, m2);
+                        ansver(i,j) = sqrt(summ[0] + summ[1]);
+                }
+
+        return ansver;
+}
+
+ 					WITH SSE */
 Matrix<float> ModulGrad(BMP image)
 {
 	Matrix<float> sobel_x = Sobel_x(image);
@@ -408,7 +497,6 @@ std::vector<float> Concatination(BMP image)
 
 	return concat;
 }
-
 void LoadFileList(const string& data_file, TFileList* file_list) {
     ifstream stream(data_file.c_str());
 

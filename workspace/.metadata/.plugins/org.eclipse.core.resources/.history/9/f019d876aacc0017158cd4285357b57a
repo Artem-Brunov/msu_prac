@@ -1,0 +1,48 @@
+
+var text;
+var synth;
+var ttsObject;
+
+
+function add()
+{	
+    var documentsDir  ="~/workspace/BasicUI/js";
+	documentsDir.createFile('sample-text-file.txt');
+	try 
+	{
+		file = documentsDir.resolve('sample-text-file.txt');
+	} 
+	catch (exc) 
+	{
+		console.log('Could not resolve file: ' + exc.message);
+		return;
+	}
+	try {
+		file.openStream('a',writeToStream, onError);
+		} catch (exc) {
+		console.log('Could not write to file: ' + exc.message);
+		}
+	try {
+		fileStream.write('This is my first sentence to write.');
+		fileStream.close();
+		} 
+	catch (exc) {
+		console.log('Could not write to file: ' + exc.message);
+		}
+}
+
+function talk() 
+{
+
+	synth = window.speechSynthesis;
+	ttsObject = new SpeechSynthesisUtterance(voices);
+	
+	synth.speak(ttsObject);
+}
+
+function stop()
+{
+	var pp = add();
+	alert(pp);
+	synth.pause();
+}

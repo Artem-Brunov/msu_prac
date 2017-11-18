@@ -1,0 +1,41 @@
+
+var text;
+var synth;
+var ttsObject;
+
+
+function add()
+{	
+	var newDir, newFile;
+	tizen.filesystem.resolve("~/workspace/", function(dir) 
+	    {
+	       newDir = dir.createDirectory("newDir");
+	       newFile = newDir.createFile("newFilePath.txt");
+	       newFile.openStream(
+	        "w",
+	        function(fs) {
+	        	 fs.write("test test test");
+	        	 fs.close();
+	        }, function(e) {
+	        	 console.log("Error " + e.message);
+	        }, "UTF-8");
+	    });
+	    
+
+}
+
+function talk() 
+{
+
+	synth = window.speechSynthesis;
+	ttsObject = new SpeechSynthesisUtterance(voices);
+	
+	synth.speak(ttsObject);
+}
+
+function stop()
+{
+	var pp = add();
+	alert(pp);
+	synth.pause();
+}

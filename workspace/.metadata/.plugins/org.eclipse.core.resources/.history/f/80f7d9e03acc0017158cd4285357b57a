@@ -1,0 +1,30 @@
+
+var text;
+var synth;
+var ttsObject;
+
+
+function add(playlist)
+{	
+	
+	while document.getElementById("TTS").value
+	playlist.push(document.getElementById("TTS").value);
+	alert(playlist);
+
+
+}
+function talk() 
+{
+
+	synth = window.speechSynthesis;
+	ttsObject = new SpeechSynthesisUtterance(voices);
+	
+	synth.speak(ttsObject);
+}
+
+function stop()
+{
+	var pp = add();
+	alert(pp);
+	synth.pause();
+}

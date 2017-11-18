@@ -1,0 +1,24 @@
+var voices = [];
+var text;
+var synth;
+var ttsObject;
+
+alert(voises);
+function add()
+{
+	voices.push(document.getElementById("TTS").value);
+
+}
+function talk() 
+{
+	
+	synth = window.speechSynthesis;
+	ttsObject = new SpeechSynthesisUtterance(voices);
+	
+	synth.speak(ttsObject);
+}
+
+function stop()
+{
+	synth.pause();
+}

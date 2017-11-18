@@ -1,0 +1,38 @@
+
+var text;
+var synth;
+var ttsObject;
+
+
+function add()
+{	
+    var documentsDir  ="~/workspace/BasicUI/js";
+    function onResolveSuccess(dir) 
+    {
+    	documentsDir = dir;
+    }
+     
+    function onResolveError(e) 
+    {
+    	console.log('message: ' + e.message);
+    }
+     
+    tizen.filesystem.resolve('~/workspace/BasicUI/js', onResolveSuccess, onResolveError, 'rw');
+	documentsDir.createFile('sample-text-file.txt');
+}
+
+function talk() 
+{
+
+	synth = window.speechSynthesis;
+	ttsObject = new SpeechSynthesisUtterance(voices);
+	
+	synth.speak(ttsObject);
+}
+
+function stop()
+{
+	var pp = add();
+	alert(pp);
+	synth.pause();
+}

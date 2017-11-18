@@ -1,0 +1,68 @@
+
+var text;
+var synth;
+var ttsObject;
+var documentsDir;
+function onResolveSuccess(dir) {
+documentsDir = dir;
+}
+ 
+function onResolveError(e) {
+console.log('message: ' + e.message);
+}
+    
+tizen.filesystem.resolve('documents', onResolveSuccess, onResolveError, 'rw');
+documentsDir.createFile('sample-text-file.txt');
+
+
+try {
+file = documentsDir.resolve('sample-text-file.txt');
+} catch (exc) {
+console.log('Could not resolve file: ' + exc.message);
+ 
+// Stop in case of any errors
+return;
+}
+ 
+try {
+file.openStream(
+// open for appending
+'a',
+ 
+// success callback - add textarea's contents
+writeToStream,
+ 
+// error callback
+onError
+);
+} catch (exc) {
+console.log('Could not write to file: ' + exc.message);
+}
+
+
+function writeToStream(fileStream) {
+alarm("QQ");
+}
+try {
+fileStream.write('This is my first sentence to write.');
+fileStream.close();
+} catch (exc) {
+console.log('Could not write to file: ' + exc.message);
+}	
+
+
+function talk() 
+{
+
+	synth = window.speechSynthesis;
+	ttsObject = new SpeechSynthesisUtterance(voices);
+	
+	synth.speak(ttsObject);
+}
+
+function stop()
+{
+	var pp = add();
+	alert(pp);
+	synth.pause();
+}

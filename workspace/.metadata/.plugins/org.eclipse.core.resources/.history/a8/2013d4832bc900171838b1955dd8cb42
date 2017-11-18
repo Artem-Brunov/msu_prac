@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Tizen Mobile Web Basic Template" />
+
+    <title>Tizen Mobile Web Basic Application</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script>
+    	function TextToSpeech()
+    	{
+			var text = document.TTS.text.value;
+			var synth = window.speechSynthesis;
+			
+			var ttsObject = new SpeechSynthesisUtterance(text);
+			var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+			
+			synth.speak(ttsObject);// Device will start to speak "Any text that should be spoken"
+			
+    	}
+    </script>
+</head>
+
+<body>
+    <form name = "TTS">
+    	<input name = "text" tabindex = 1 onblur="this.value = this.value.toCase()">
+    	<button onclick = "TextToSpeech();" tabindex = 2>Send</button>
+    </form>
+    	
+</body>
+
+</html>

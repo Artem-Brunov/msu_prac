@@ -1,0 +1,25 @@
+var voices;
+var text;
+var synth;
+var ttsObject;
+
+
+function add(m)
+{
+	alert(m);
+	window.voices.push(m);
+
+}
+function talk() 
+{
+	
+	synth = window.speechSynthesis;
+	ttsObject = new SpeechSynthesisUtterance(voices);
+	
+	synth.speak(ttsObject);
+}
+
+function stop()
+{
+	synth.pause();
+}

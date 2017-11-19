@@ -2,11 +2,12 @@
 var text;
 var synth;
 var ttsObject;
-
-
+window.i = 0;
 function add()
 {	
-	
+	window.list[window.i] = document.getElementById("TTS").value;
+	alert(window.list);
+	window.i+=1;
 }
 
 function talk() 

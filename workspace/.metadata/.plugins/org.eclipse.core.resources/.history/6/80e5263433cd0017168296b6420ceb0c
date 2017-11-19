@@ -1,0 +1,27 @@
+
+var text;
+var synth;
+var ttsObject;
+window.list = add();
+
+function add()
+{	
+	list += document.getElementById("TTS").value;
+	alert(list);
+}
+
+function talk() 
+{
+
+	synth = window.speechSynthesis;
+	ttsObject = new SpeechSynthesisUtterance(voices);
+	
+	synth.speak(ttsObject);
+}
+
+function stop()
+{
+	var pp = add();
+	alert(pp);
+	synth.pause();
+}

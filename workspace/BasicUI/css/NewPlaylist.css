@@ -9,3 +9,14 @@
   	top: 4%;
   	left: 50%;
 }
+.BBack{
+	position: absolute;
+  	top: 90%;
+  	left: 7%;
+}
+.Settings{
+	position: absolute;
+	left: 18%;
+	top: 10%;
+ 	color: Gray;
+}

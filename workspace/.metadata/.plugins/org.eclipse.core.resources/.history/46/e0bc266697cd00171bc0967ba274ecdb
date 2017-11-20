@@ -9,14 +9,16 @@ body {
  .titl{
  	
  	position: absolute;
- 	margin-left:  -75px;
- 	left: 50%;
+ 	left: 25.5%;
+ 	top: 10%;
+ 	color: Gray;
  }
  a.first_button {
- 	
+ 
 	display: block;
 	width: 160px;
-	height: 80px;
+	height: 80px;  
+  	line-height: 5em;
 	border-radius: 5px;
  	background: rgb(64,199,129);
 	box-shadow: 0 -3px rgb(53,167,110) inset;
@@ -33,12 +35,40 @@ a.first_button:active {
 }
 .New {
 	position: absolute;
-  	top: 35%;
-  	left: 25%;
+  	top: 47%;
+  	left: 28%;
+  
 }
 .Select {
 	position: absolute;
-  	top: 55%;
-  	left: 25%;
+  	top: 64%;
+  	left: 28%;
+  
+}
+.FastPlay {
+	position: absolute;
+  	top: 30%;
+  	left: 28%;
+  
 }
 
+a.back {
+ 
+	display: block;
+	width: 40px;
+	height: 20px;  
+  	line-height: 5em;
+	border-radius: 5px;
+ 	background: rgb(64,199,129);
+	box-shadow: 0 -3px rgb(53,167,110) inset;
+	font-weight: 900;
+  	color: white;
+  	text-align: center;
+  	text-decoration: none;
+  	transition: 0.2s;
+} 
+a.back { background: rgb(53, 167, 110); }
+a.back:active {
+  background: rgb(33,147,90);
+  box-shadow: 0 3px rgb(33,147,90) inset;
+}

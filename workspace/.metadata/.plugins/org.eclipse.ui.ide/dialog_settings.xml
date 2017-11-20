@@ -18,4 +18,11 @@
 		<item value="org.tizen.unittest.feature:2.0.0.201709060258"/>
 		<item value="org.tizen.web.feature:2.0.0.201709040814"/>
 	</list>
+	<section name="SaveAsDialogSettings">
+		<item value="700" key="DIALOG_WIDTH"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="602" key="DIALOG_HEIGHT"/>
+		<item value="319" key="DIALOG_X_ORIGIN"/>
+		<item value="-17" key="DIALOG_Y_ORIGIN"/>
+	</section>
 </section>

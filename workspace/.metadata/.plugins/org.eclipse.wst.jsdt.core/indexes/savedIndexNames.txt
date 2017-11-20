@@ -1,12 +1,12 @@
 INDEX VERSION 1.3+/home/artem/msu_prac/workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-665266101.index
-793317622.index
-2453353295.index
-351449485.index
-3623452879.index
-2309841268.index
-2673317167.index
-908111894.index
 911358464.index
+1989516243.index
 796395514.index
 821086196.index
+2453353295.index
+3623452879.index
+351449485.index
+793317622.index
+665266101.index
+908111894.index
+2673317167.index

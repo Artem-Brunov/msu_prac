@@ -1,0 +1,14 @@
+function Play(){
+	var word_list = [];
+	var translate_list = [];
+	
+	word_list = document.forms["Eng"].elements["EngW"].value.split("\n");
+	translate_list = document.forms["Trnslt"].elements["Transl"].value.split("\n ");
+	var msg = new SpeechSynthesisUtterance(word_list);
+	var trnslt = new SpeechSynthesisUtterance(translate_list);
+	window.speechSynthesis.speak(trnslt);
+	for(var i = 0; i < word_list.length; i++)
+	{
+		
+	}
+}

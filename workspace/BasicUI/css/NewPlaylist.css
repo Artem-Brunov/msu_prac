@@ -20,3 +20,23 @@
 	top: 10%;
  	color: Gray;
 }
+.take_1{
+	position: absolute;
+	left: 6%;
+	top: 3%;
+}
+.take_2{
+	position: absolute;
+	right: 6%;
+	top: 3%;
+}
+.FP{
+	position: absolute;
+	left: 27.7%;
+	top: 60%;
+}
+.FP_2{
+	position: absolute;
+	right: 27.7%;
+	top: 75%;
+}

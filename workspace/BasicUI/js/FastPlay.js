@@ -6,26 +6,24 @@ function Play(a){
 	word_list = document.forms["Eng"].elements["EngW"].value.split("\n");
 	translate_list = document.forms["Trnslt"].elements["Transl"].value.split("\n");
 	
-	
-	for(var i = 0; i < word_list.length; i++)
+	while(true)
 	{
-		msg = new SpeechSynthesisUtterance(word_list[i]);
-		trnslt = new SpeechSynthesisUtterance(translate_list[i]);
-		msg.lang = 'en-US';
-		window.speechSynthesis.speak(msg);
-		window.speechSynthesis.speak(trnslt);
-		if(a == 0)
+		for(var i = 0; i < word_list.length; i++)
 		{
-			window.speechSynthesis.pause();
-		}
-		if(a == 1)
-		{
-			window.speechSynthesis.resume();
-		
-		}
-		if(i == word_list.length-1)
-		{
-			i = 0;
+			msg = new SpeechSynthesisUtterance(word_list[i]);
+			trnslt = new SpeechSynthesisUtterance(translate_list[i]);
+			msg.lang = 'en-US';
+			window.speechSynthesis.speak(msg);
+			window.speechSynthesis.speak(trnslt);
+			if(a == 0)
+			{
+				window.speechSynthesis.pause();
+			}
+			if(a == 1)
+			{
+				window.speechSynthesis.resume();
+			
+			}
 		}
 	}
 }

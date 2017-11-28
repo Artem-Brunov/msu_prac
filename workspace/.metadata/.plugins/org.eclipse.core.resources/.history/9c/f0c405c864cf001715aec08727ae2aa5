@@ -1,11 +1,3 @@
-if	(!window.webkitIndexedDB)	{	
-window.alert('Does	not	support	IndexedDB');	
-}	else	{	
-var tizenDB =	{};	
-var request	=	window.webkitIndexedDB.open('TizenIndexedDB');	
-request.onsuccess =	function(e)	{};	
-request.onerror =	function(e)	{/*	Error	handling	*/};
-}
 function Play(a)
 {
 	
@@ -16,7 +8,7 @@ function Play(a)
 	translate_list = document.forms["Trnslt"].elements["Transl"].value.split("\n");
 	//while(true)
 	//{
-		for(var i = 0; i < word_list.length; i++)
+		for(var i = 0; i < word_list.length; i++)+
 		{
 			
 			msg = new SpeechSynthesisUtterance(word_list[i]);

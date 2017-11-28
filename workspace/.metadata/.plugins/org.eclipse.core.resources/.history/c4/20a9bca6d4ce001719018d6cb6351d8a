@@ -17,14 +17,14 @@
 		<form name = "Eng">
 		
   			<p align = "center">Word on English<br>
-  				<textarea cols = "13" rows = "10" wrap = "hard" name = "EngW"></textarea>
+  				<textarea cols = "13" rows = "20" wrap = "hard" name = "EngW"></textarea>
   			</p>
   		</form>
   	</div> 
   	<div class = take_2>
   		<form name = "Trnslt">
   			<p align = "center">Translate<br>
-  				<textarea cols = "13" rows = "10" wrap = "hard" name = "Transl"></textarea>
+  				<textarea cols = "13" rows = "20" wrap = "hard" name = "Transl"></textarea>
   			</p>
  		</form>
  	</div>

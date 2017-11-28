@@ -1,11 +1,3 @@
-if	(!window.webkitIndexedDB)	{	
-window.alert('Does	not	support	IndexedDB');	
-}	else	{	
-var tizenDB =	{};	
-var request	=	window.webkitIndexedDB.open('TizenIndexedDB');	
-request.onsuccess =	function(e)	{};	
-request.onerror =	function(e)	{/*	Error	handling	*/};
-}
 function Play(a)
 {
 	
@@ -22,11 +14,6 @@ function Play(a)
 			msg = new SpeechSynthesisUtterance(word_list[i]);
 			trnslt = new SpeechSynthesisUtterance(translate_list[i]);
 			msg.lang = 'en-US';
-			if(a == 2)
-			{
-				window.speechSynthesis.cansel();
-				return;
-			}
 			window.speechSynthesis.speak(msg);
 			window.speechSynthesis.speak(trnslt);
 			if(a == 0)
@@ -38,7 +25,11 @@ function Play(a)
 				window.speechSynthesis.resume();
 			
 			}
-			
+			if(a == 2)
+			{
+				window.speechSynthesis.pause();
+				return;
+			}
 		}
 	//}
 }

@@ -17,14 +17,14 @@
 		<form name = "Eng">
 		
   			<p align = "center">Word on English<br>
-  				<textarea cols = "13" rows = "10" wrap = "hard" name = "EngW"></textarea>
+  				<textarea cols = "13" rows = "20" wrap = "hard" name = "EngW"></textarea>
   			</p>
   		</form>
   	</div> 
   	<div class = take_2>
   		<form name = "Trnslt">
   			<p align = "center">Translate<br>
-  				<textarea cols = "13" rows = "10" wrap = "hard" name = "Transl"></textarea>
+  				<textarea cols = "13" rows = "20" wrap = "hard" name = "Transl"></textarea>
   			</p>
  		</form>
  	</div>
@@ -35,7 +35,7 @@
 		<a href = "#" onClick = "Play(0)" class = "first_button">Pause</a>
 	</div>
 	<div class = "BBack">
-			<a href = "index.html" onClick = "Play(2)"><img src="images/Back.png" width="50" 
+			<a href = "index.html"><img src="images/Back.png" width="50" 
   height="50" alt="One step back"></a>
 		</div>
 </body>

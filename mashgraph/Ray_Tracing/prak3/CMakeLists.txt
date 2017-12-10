@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.9)
+project(prak3)
+
+add_library(EasyBMP EasyBMP/src/EasyBMP.cpp)
+include_directories(EasyBMP/include)
+set(CMAKE_CXX_STANDARD 11)
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
+add_executable(With_parallel main.cpp)
+add_executable(Without_parallel main.cpp)
+target_link_libraries(With_parallel EasyBMP)
+target_link_libraries(Without_parallel EasyBMP)

@@ -1,0 +1,5 @@
+/home/artem/CLionProjects/prak3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/artem/CLionProjects/prak3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/artem/CLionProjects/prak3/cmake-build-debug/CMakeFiles/Without_parallel.dir
+/home/artem/CLionProjects/prak3/cmake-build-debug/CMakeFiles/With_parallel.dir
+/home/artem/CLionProjects/prak3/cmake-build-debug/CMakeFiles/EasyBMP.dir

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libEasyBMP.a  CMakeFiles/EasyBMP.dir/EasyBMP/src/EasyBMP.cpp.o
+/usr/bin/ranlib libEasyBMP.a

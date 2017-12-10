@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../EasyBMP/include/EasyBMP.h
+iostream
+-
+cmath
+-
+cctype
+-
+cstring
+-
+stdio.h
+-
+cstdio
+-
+EasyBMP_DataStructures.h
+../EasyBMP/include/EasyBMP_DataStructures.h
+EasyBMP_BMP.h
+../EasyBMP/include/EasyBMP_BMP.h
+EasyBMP_VariousBMPutilities.h
+../EasyBMP/include/EasyBMP_VariousBMPutilities.h
+
+../EasyBMP/include/EasyBMP_BMP.h
+
+../EasyBMP/include/EasyBMP_DataStructures.h
+
+../EasyBMP/include/EasyBMP_VariousBMPutilities.h
+
+/home/artem/CLionProjects/prak3/main.cpp
+iostream
+-
+glm/glm.hpp
+-
+EasyBMP.h
+-
+vector
+-
+omp.h
+-
+

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Without_parallel.dir/main.cpp.o  -o Without_parallel libEasyBMP.a 

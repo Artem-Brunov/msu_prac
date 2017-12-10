@@ -1,16 +1,16 @@
-ansver = "NO"
-C = []
-i = 0
-while 1:
-	A = input()
-	if " " in A:
-		C.append(A)
-	else:
-		ansver_1 = A
-		ansver_2 = input()
-		break
-while i < len(c):
-	if ansver_1 in C[i]:
-		ansver = "YES"
-	i+=1
-print(ansver)
+Tunnels = {}
+From = input()
+while " " in From:
+	From, To = From.split()
+	Tunnels.setdefault(From,set()).add(To)
+	Tunnels.setdefault(To,set()).add(From)
+	From = input()
+To = input()
+Res, Plan = set(), {From}
+while Plan:
+	New = set()
+	for e in Plan:
+		New |= Tunnels[e]
+	Res |= Plan
+	Plan = New - Res
+print("YES" if To in Res else "NO") 

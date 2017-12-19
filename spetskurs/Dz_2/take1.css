@@ -1,0 +1,23 @@
+.take_1 {
+    position: absolute;
+    top: 5%;
+    width: 30%;
+    height: 90%;
+    outline: 2px solid #000;
+}
+.take_2 {
+    position: absolute;
+    left: 34%;
+    top: 5%;
+    width: 30%;
+    height: 90%;
+    outline: 2px solid #000;
+}
+.take_3 {
+    position: absolute;
+    left:67.5%;
+    top: 5%;
+    width: 30%;
+    height: 90%;
+    outline: 2px solid #000;
+}

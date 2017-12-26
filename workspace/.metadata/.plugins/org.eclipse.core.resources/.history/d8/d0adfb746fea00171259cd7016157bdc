@@ -1,0 +1,47 @@
+.Return {
+	position: absolute;
+  	top: 24%;
+  	left:50%;
+  
+}
+.Add {
+	position: absolute;
+  	top: 15%;
+  	left: 27.7%;
+}
+.listn {
+	position: absolute;
+  	top: 15%;
+  	left: 27.7%;
+}
+.BBack{
+	position: absolute;
+  	top: 90%;
+  	left: 7%;
+}
+.Settings{
+	position: absolute;
+	left: 18%;
+	top: 10%;
+ 	color: Gray;
+}
+.take_1{
+	position: absolute;
+	left: 6%;
+	top: 3%;
+}
+.take_2{
+	position: absolute;
+	right: 6%;
+	top: 3%;
+}
+.FP{
+	position: absolute;
+	left: 27.7%;
+	top: 60%;
+}
+.FP_2{
+	position: absolute;
+	right: 27.7%;
+	top: 75%;
+}

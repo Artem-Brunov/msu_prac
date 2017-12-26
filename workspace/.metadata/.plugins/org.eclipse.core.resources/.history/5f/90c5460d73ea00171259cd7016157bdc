@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Tizen Mobile Web Basic Template" />
+
+    <title>Tizen Mobile Web Basic Application</title>
+    <link rel="stylesheet" type="text/css" href="css/NewPlaylist.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+	<div class = "listn">
+	<form name="test">
+  		<h3 align = "center">Please, enter the word</h3>
+  		<p align = "center">
+   			<input type="text" size="21">
+  		</p>
+ 
+  		
+ 	</form>
+</div>	
+	<div class = "Add">
+		<a href = "#" onClick = "ADD_WORD()" class = "first_button">NEXT</a>
+	</div>
+	<div class = "Return">
+		<a href = "PLAY"  class = "first_button">LISTEN</a>
+	</div>
+	<div class = "BBack">
+			<a href = "index.html"><img src="images/Back.png" width="50" 
+  height="50" alt="One step back"></a>
+	</div>
+	</div>
+</body>
+</html>

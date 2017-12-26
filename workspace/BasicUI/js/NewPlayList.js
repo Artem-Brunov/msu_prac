@@ -1,29 +1,32 @@
 
-var listname = "List1"; // create playlist
+//var listname = document.forms["test"].elements["pop"].value; // create playlist
 
 var new_word  = "pictute"; // add word to playlist List1
 
-var create_playlist = function(listname){
+var create_playlist = function(){
 	var url = "http://localhost:3002/api/";
-    var playlist = listname;
-    var request_line = url + "playlist";
+	var playlist = document.forms["test"].elements["pop"].value; 
+	var request_line = url + "playlist";
+	alert(playlist);
+	var data = "name="+playlist;
 
-    var data = "name="+playlist;
+	var xhr = new XMLHttpRequest();
+	xhr.withCredentials = true;
 
-    var xhr = new XMLHttpRequest();
-    xhr.withCredentials = true;
+	xhr.addEventListener("readystatechange", function () {
 
-    xhr.addEventListener("readystatechange", function () {
-        if (this.readyState === 4 && this.status === 200) {
-            alert(this.responseText);
-        }
-    });
-    xhr.open("POST", request_line);
-    xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
-    xhr.send(data);
+	if (xhr.readyState === 4 && xhr.status === 200) {
+	var res = JSON.parse(xhr.responseText);
+	
+	}
+	});
 
+	xhr.open("POST", request_line);
+	xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+
+	xhr.send(data);
 };
-
+/*
 var add_word_to_list = function(listname,word){//api/playlist
 	var id_we_need = Number;
     var xhr = new XMLHttpRequest();
@@ -52,6 +55,5 @@ var add_word_to_list = function(listname,word){//api/playlist
     xhr.send(null);
 };
 };
+*/
 
-create_playlist(listname);
-add_word_to_list(listname,word);

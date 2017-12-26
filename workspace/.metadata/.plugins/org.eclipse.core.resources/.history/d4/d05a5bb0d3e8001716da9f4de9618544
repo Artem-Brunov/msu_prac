@@ -1,0 +1,97 @@
+
+function Play()
+{
+	var json_response;		
+	var send_request_to_add = function(){
+		var url = "http://localhost:3000/api/";
+		 //var word = "word";
+		var playlist = "playlist";
+		var request_line = url+playlist;
+		var xml = new XMLHttpRequest();
+		xml.open('GET',request_line,true);
+
+		xml.onreadystatechange = function(){
+			if (xml.readyState === 4) {
+				if(xml.status === 200) {
+					json_response = JSON.parse(xml.responseText);
+                    //alert(json_response);
+				}
+                else {
+                	alert("status NOT 200_0");
+                }
+            }
+		};
+
+		xml.send();
+	 };
+	 
+	 var ask_word = function(word){
+		 var url  = "https://cors.io/?http://api.lingualeo.com/gettranslates?";
+		 var request_line = url+"word="word;
+		 var ajax = new XMLHttpRequest();
+
+         ajax.open('GET',url,true);
+         alert("here");
+         ajax.onreadystatechange = function() {
+        	 alert("here1");
+             if (ajax.readyState === 4) {
+            	 alert("here2");
+                 if(ajax.status === 200) {
+                	 alert("here3");
+                     var json = JSON.parse(ajax.responseText);
+                     alert("here3");
+                     alert(json);
+                 }
+                 else{
+                	 alert("status not 200")
+                 }
+             }
+         };
+         ajax.send(null);
+	 }
+	 
+	// var word_list = [];
+	 
+	// word_list = document.forms["Eng"].elements["EngW"].value.split("\n");
+	 //var text = word_list[0];
+     //text = yandex_translator.translate(text);
+	 var word = "cut";
+     send_request_to_add();
+     ask_word(word);
+     //var url = "https://cors.io/?"+voice_mp3;
+     //get_mp3_sound(url);
+
+         
+	/*var word_list = [];
+	var translate_list = [];
+	var msg, trnslt;
+	word_list = document.forms["Eng"].elements["EngW"].value.split("\n");
+	translate_list = document.forms["Trnslt"].elements["Transl"].value.split("\n");
+	//while(true)
+	//{
+		for(var i = 0; i < word_list.length; i++)
+		{
+			
+			msg = new SpeechSynthesisUtterance(word_list[i]);
+			trnslt = new SpeechSynthesisUtterance(translate_list[i]);
+			msg.lang = 'en-US';
+			if(a == 2)
+			{
+				window.speechSynthesis.cansel();
+				return;
+			}
+			window.speechSynthesis.speak(msg);
+			window.speechSynthesis.speak(trnslt);
+			if(a == 0)
+			{
+				window.speechSynthesis.pause();
+			}
+			if(a == 1)
+			{
+				window.speechSynthesis.resume();
+			
+			}
+			
+		}
+	//}*/
+}

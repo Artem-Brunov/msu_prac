@@ -6502,3 +6502,1602 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browse
 
 !ENTRY org.tizen.common.ui.Startup 1 0 2017-11-25 20:09:21.830
 !MESSAGE SDK Information: Path [/home/artem/tizen-studio], Data Path [/home/artem/tizen-studio-data], Platform Path [/home/artem/tizen-studio/platforms/tizen-3.0/wearable]
+!SESSION 2017-12-05 21:16:44.356 -----------------------------------------------
+eclipse.buildId=1.3
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2017-12-05 21:16:58.367
+!MESSAGE SDK Information: Path [/home/kira/tizen1], Data Path [/home/kira/tizen-studio-data.1], Platform Path [/home/kira/tizen1/platforms/tizen-3.0/wearable]
+!SESSION 2017-12-05 21:51:19.114 -----------------------------------------------
+eclipse.buildId=1.3
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2017-12-05 21:51:31.183
+!MESSAGE SDK Information: Path [/home/kira/tizen1], Data Path [/home/kira/tizen-studio-data.1], Platform Path [/home/kira/tizen1/platforms/tizen-3.0/wearable]
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2017-12-05 21:52:18.673
+!MESSAGE Error setting focus to : org.eclipse.e4.ui.model.application.ui.basic.impl.PartImpl new_project
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.SWT.error(SWT.java:4377)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:484)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:419)
+	at org.eclipse.swt.widgets.Control.getVisible(Control.java:2998)
+	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1465)
+	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1465)
+	at org.eclipse.ui.texteditor.StatusTextEditor.setFocus(StatusTextEditor.java:120)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.delegateSetFocus(CompatibilityPart.java:210)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:252)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:258)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:229)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:107)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.focusGui(PartRenderingEngine.java:775)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$2.setFocus(ContributedPartRenderer.java:102)
+	at org.eclipse.swt.custom.CTabItem.setFocus(CTabItem.java:381)
+	at org.eclipse.swt.custom.CTabFolder.setFocus(CTabFolder.java:2629)
+	at org.eclipse.swt.widgets.Control.fixFocus(Control.java:219)
+	at org.eclipse.swt.widgets.Control.setVisible(Control.java:5023)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3200)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3157)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1359)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer$1.handleEvent(LazyStackRenderer.java:72)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:186)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:145)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4633)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:211)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:36)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:85)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:171)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1279)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1236)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.closePart(StackRenderer.java:1319)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.access$4(StackRenderer.java:1301)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$11.close(StackRenderer.java:1186)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1948)
+	at org.eclipse.swt.custom.CTabFolder$1.handleEvent(CTabFolder.java:344)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4481)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1331)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3819)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3430)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1488)
+!SESSION 2017-12-05 22:03:56.621 -----------------------------------------------
+eclipse.buildId=1.3
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2017-12-05 22:04:06.778
+!MESSAGE SDK Information: Path [/home/kira/tizen1], Data Path [/home/kira/tizen-studio-data.1], Platform Path [/home/kira/tizen1/platforms/tizen-3.0/wearable]
+!SESSION 2017-12-05 23:01:43.971 -----------------------------------------------
+eclipse.buildId=1.3
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-12-05 23:01:54.092
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2017-12-05 23:02:09.430
+!MESSAGE SDK Information: Path [/home/kira/tizen1], Data Path [/home/kira/tizen-studio-data.1], Platform Path [/home/kira/tizen1/platforms/tizen-3.0/wearable]
+!SESSION 2017-12-06 00:05:24.527 -----------------------------------------------
+eclipse.buildId=1.3
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2017-12-06 00:05:37.672
+!MESSAGE SDK Information: Path [/home/kira/tizen1], Data Path [/home/kira/tizen-studio-data.1], Platform Path [/home/kira/tizen1/platforms/tizen-3.0/wearable]
+
+!ENTRY org.eclipse.jface 2 0 2017-12-06 00:05:39.721
+!MESSAGE Ignored reentrant call while viewer is busy. This is only logged once per viewer instance, but similar calls will still be ignored.
+!STACK 0
+java.lang.RuntimeException
+	at org.eclipse.jface.viewers.ColumnViewer.checkBusy(ColumnViewer.java:760)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:527)
+	at org.eclipse.ui.navigator.CommonViewer.refresh(CommonViewer.java:347)
+	at org.eclipse.ui.navigator.CommonViewer.refresh(CommonViewer.java:490)
+	at org.eclipse.ui.internal.navigator.resources.workbench.ResourceExtensionContentProvider$3.run(ResourceExtensionContentProvider.java:282)
+	at org.eclipse.ui.internal.navigator.resources.workbench.ResourceExtensionContentProvider.runUpdates(ResourceExtensionContentProvider.java:293)
+	at org.eclipse.ui.internal.navigator.resources.workbench.ResourceExtensionContentProvider.processDelta(ResourceExtensionContentProvider.java:104)
+	at org.eclipse.ui.model.WorkbenchContentProvider.resourceChanged(WorkbenchContentProvider.java:109)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:373)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1470)
+	at org.eclipse.core.internal.resources.Project.touch(Project.java:1312)
+	at org.eclipse.wst.jsdt.internal.core.SetContainerOperation.execute(SetContainerOperation.java:122)
+	at org.eclipse.wst.jsdt.core.JavaScriptCore.setJsGlobalScopeContainer(JavaScriptCore.java:3924)
+	at org.eclipse.wst.jsdt.launching.JREContainerInitializer.initialize(JREContainerInitializer.java:48)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2216)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.getJsGlobalScopeContainer(JavaModelManager.java:1538)
+	at org.eclipse.wst.jsdt.core.JavaScriptCore.getJsGlobalScopeContainer(JavaScriptCore.java:1342)
+	at org.eclipse.wst.jsdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2747)
+	at org.eclipse.wst.jsdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2026)
+	at org.eclipse.wst.jsdt.internal.core.ProjectReferenceChange.updateProjectReferencesIfNecessary(ProjectReferenceChange.java:41)
+	at org.eclipse.wst.jsdt.internal.core.ChangeClasspathOperation.classpathChanged(ChangeClasspathOperation.java:57)
+	at org.eclipse.wst.jsdt.internal.core.SetContainerOperation.execute(SetContainerOperation.java:117)
+	at org.eclipse.wst.jsdt.core.JavaScriptCore.setJsGlobalScopeContainer(JavaScriptCore.java:3924)
+	at org.eclipse.wst.jsdt.libraries.BasicBrowserLibraryJsGlobalScopeContainerInitializer.initialize(BasicBrowserLibraryJsGlobalScopeContainerInitializer.java:135)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2216)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.getJsGlobalScopeContainer(JavaModelManager.java:1538)
+	at org.eclipse.wst.jsdt.core.JavaScriptCore.getJsGlobalScopeContainer(JavaScriptCore.java:1342)
+	at org.eclipse.wst.jsdt.internal.ui.packageview.JsGlobalScopeContainer.<init>(JsGlobalScopeContainer.java:92)
+	at org.eclipse.wst.jsdt.internal.ui.packageview.PackageExplorerContentProvider.getPackageFragmentRoots(PackageExplorerContentProvider.java:691)
+	at org.eclipse.wst.jsdt.ui.StandardJavaScriptElementContentProvider.getChildren(StandardJavaScriptElementContentProvider.java:163)
+	at org.eclipse.wst.jsdt.internal.ui.packageview.PackageExplorerContentProvider.getChildren(PackageExplorerContentProvider.java:398)
+	at org.eclipse.wst.jsdt.internal.ui.navigator.JavaNavigatorContentProvider.getChildren(JavaNavigatorContentProvider.java:157)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:95)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:241)
+	at org.eclipse.ui.internal.navigator.extensions.SafeDelegateTreeContentProvider.getChildren(SafeDelegateTreeContentProvider.java:93)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider$1.run(NavigatorContentServiceContentProvider.java:157)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.internalGetChildren(NavigatorContentServiceContentProvider.java:143)
+	at org.eclipse.ui.internal.navigator.NavigatorContentServiceContentProvider.getChildren(NavigatorContentServiceContentProvider.java:129)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getRawChildren(AbstractTreeViewer.java:1365)
+	at org.eclipse.jface.viewers.TreeViewer.getRawChildren(TreeViewer.java:353)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:906)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:617)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$1.run(AbstractTreeViewer.java:813)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:791)
+	at org.eclipse.jface.viewers.TreeViewer.createChildren(TreeViewer.java:611)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.createChildren(AbstractTreeViewer.java:762)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.handleTreeExpand(AbstractTreeViewer.java:1493)
+	at org.eclipse.jface.viewers.TreeViewer.handleTreeExpand(TreeViewer.java:903)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$4.treeExpanded(AbstractTreeViewer.java:1505)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:132)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4481)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1331)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1355)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
+	at org.eclipse.swt.widgets.Tree.gtk_test_expand_row(Tree.java:2163)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:2013)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4723)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:9326)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1225)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2435)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3428)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1488)
+
+!ENTRY org.tizen.common.connection.toolbar.EmulatorLaunchWorker 4 0 2017-12-06 00:16:03.590
+!MESSAGE [2017.12.06 00:16:03][ERROR] EmulatorLaunchWorker.java(93) - Emulator has been booted up: M-3.0-x86
+
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-12-06 00:16:10.301
+!MESSAGE An internal error occurred during: "Launching BasicUI (1)".
+!STACK 0
+java.lang.NullPointerException
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:353)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.tizen.common.connection.toolbar.TargetToolBarManager 4 0 2017-12-06 00:19:45.002
+!MESSAGE [2017.12.06 00:19:45][ERROR] TargetToolBarManager.java(384) - Failed to get VM property
+
+
+!ENTRY org.tizen.common.connection.toolbar.TargetToolBarManager 4 0 2017-12-06 00:20:06.084
+!MESSAGE [2017.12.06 00:20:06][ERROR] TargetToolBarManager.java(384) - Failed to get VM property
+
+
+!ENTRY org.tizen.common.connection.toolbar.TargetToolBarManager 4 0 2017-12-06 00:20:31.459
+!MESSAGE [2017.12.06 00:20:31][ERROR] TargetToolBarManager.java(384) - Failed to get VM property
+
+
+!ENTRY org.tizen.common.connection.toolbar.EmulatorLaunchWorker 4 0 2017-12-06 00:23:00.010
+!MESSAGE [2017.12.06 00:23:00][ERROR] EmulatorLaunchWorker.java(73) - Timeout to wait for emulator booting done
+
+
+!ENTRY org.tizen.common.connection.toolbar.TargetToolBarManager 4 0 2017-12-06 00:23:09.661
+!MESSAGE [2017.12.06 00:23:09][ERROR] TargetToolBarManager.java(384) - Failed to get VM property
+
+
+!ENTRY org.tizen.common.connection.toolbar.TargetToolBarManager 4 0 2017-12-06 00:30:00.176
+!MESSAGE [2017.12.06 00:30:00][ERROR] TargetToolBarManager.java(384) - Failed to get VM property
+
+
+!ENTRY org.tizen.common.connection.toolbar.TargetToolBarManager 4 0 2017-12-06 00:33:52.798
+!MESSAGE [2017.12.06 00:33:52][ERROR] TargetToolBarManager.java(384) - Failed to get VM property
+
+
+!ENTRY org.eclipse.wst.xml.core 4 4 2017-12-06 00:43:25.674
+!MESSAGE Invalid Hierarchy Request
+!STACK 0
+org.w3c.dom.DOMException: Invalid Hierarchy Request
+	at org.eclipse.wst.xml.core.internal.document.ElementImpl.insertBefore(ElementImpl.java:752)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.insertNode(XMLModelParser.java:1360)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.insertNode(XMLModelParser.java:1334)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.insertStartTag(XMLModelParser.java:1402)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.insertStartTag(XMLModelParser.java:1499)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.insertStructuredDocumentRegion(XMLModelParser.java:1510)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.replaceStructuredDocumentRegions(XMLModelParser.java:2354)
+	at org.eclipse.wst.xml.core.internal.document.DOMModelImpl.nodesReplaced(DOMModelImpl.java:737)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument._fireEvent(BasicStructuredDocument.java:600)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.fireStructuredDocumentEvent(BasicStructuredDocument.java:1198)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.internalReplaceText(BasicStructuredDocument.java:1979)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2423)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2408)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$2(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$3.run(JobSafeStructuredDocument.java:141)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:149)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replaceText(JobSafeStructuredDocument.java:144)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replace(BasicStructuredDocument.java:2368)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$0(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$1.run(JobSafeStructuredDocument.java:103)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:149)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replace(JobSafeStructuredDocument.java:106)
+	at org.eclipse.jface.text.projection.ProjectionTextStore.replace(ProjectionTextStore.java:111)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1184)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1210)
+	at org.eclipse.jface.text.projection.ProjectionDocument.replace(ProjectionDocument.java:629)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.replaceTextRange(DefaultDocumentAdapter.java:248)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:7308)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:8159)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2306)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7098)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5971)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5998)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5685)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4481)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1331)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1355)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1367)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:765)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:3332)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:793)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1982)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5692)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4717)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:9326)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1225)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2435)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3428)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1488)
+
+!ENTRY org.eclipse.wst.xml.core 4 4 2017-12-06 00:43:25.678
+!MESSAGE Invalid Hierarchy Request
+!STACK 0
+org.w3c.dom.DOMException: Invalid Hierarchy Request
+	at org.eclipse.wst.xml.core.internal.document.ElementImpl.insertBefore(ElementImpl.java:752)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.insertNode(XMLModelParser.java:1360)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.insertNode(XMLModelParser.java:1334)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.insertStartTag(XMLModelParser.java:1402)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.insertStartTag(XMLModelParser.java:1499)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.insertStructuredDocumentRegion(XMLModelParser.java:1510)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.replaceStructuredDocumentRegions(XMLModelParser.java:2354)
+	at org.eclipse.wst.xml.core.internal.document.DOMModelImpl.handleRefresh(DOMModelImpl.java:524)
+	at org.eclipse.wst.xml.core.internal.document.DOMModelImpl.nodesReplaced(DOMModelImpl.java:742)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument._fireEvent(BasicStructuredDocument.java:600)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.fireStructuredDocumentEvent(BasicStructuredDocument.java:1198)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.internalReplaceText(BasicStructuredDocument.java:1979)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2423)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2408)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$2(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$3.run(JobSafeStructuredDocument.java:141)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:149)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replaceText(JobSafeStructuredDocument.java:144)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replace(BasicStructuredDocument.java:2368)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$0(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$1.run(JobSafeStructuredDocument.java:103)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:149)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replace(JobSafeStructuredDocument.java:106)
+	at org.eclipse.jface.text.projection.ProjectionTextStore.replace(ProjectionTextStore.java:111)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1184)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1210)
+	at org.eclipse.jface.text.projection.ProjectionDocument.replace(ProjectionDocument.java:629)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.replaceTextRange(DefaultDocumentAdapter.java:248)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:7308)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:8159)
+	at org.eclipse.swt.custom.StyledText.doBackspace(StyledText.java:2306)
+	at org.eclipse.swt.custom.StyledText.invokeAction(StyledText.java:7098)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5971)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5998)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5685)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4481)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1331)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1355)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1367)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:765)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:3332)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:793)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1982)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5692)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4717)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:9326)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1225)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2435)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3428)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1488)
+
+!ENTRY org.eclipse.jface.text 4 0 2017-12-06 00:50:57.140
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocumentRegion.getStartOffset(BasicStructuredDocumentRegion.java:277)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocumentRegion.getText(BasicStructuredDocumentRegion.java:304)
+	at org.tizen.web.editor.html.hover.HTMLTagAttributeInfoHoverProcessor.computeTagAttValueHelp(HTMLTagAttributeInfoHoverProcessor.java:362)
+	at org.tizen.web.editor.html.hover.HTMLTagAttributeInfoHoverProcessor.computeRegionHelp(HTMLTagAttributeInfoHoverProcessor.java:119)
+	at org.tizen.web.editor.html.hover.HTMLTagAttributeInfoHoverProcessor.computeHoverHelp(HTMLTagAttributeInfoHoverProcessor.java:94)
+	at org.tizen.web.editor.html.hover.HTMLTagAttributeInfoHoverProcessor.getHoverInfo(HTMLTagAttributeInfoHoverProcessor.java:268)
+	at org.tizen.web.editor.html.hover.HTMLEditorHoverBestMatchHover.getHoverInfo2(HTMLEditorHoverBestMatchHover.java:63)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.wst.xml.core 4 4 2017-12-06 00:51:13.202
+!MESSAGE IStructuredDocumentRegion management failed.
+!STACK 0
+org.eclipse.wst.xml.core.internal.document.StructuredDocumentRegionManagementException: IStructuredDocumentRegion management failed.
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.removeStructuredDocumentRegion(XMLModelParser.java:2258)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.removeStructuredDocumentRegion(XMLModelParser.java:2288)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.removeStructuredDocumentRegion(XMLModelParser.java:2288)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.replaceStructuredDocumentRegions(XMLModelParser.java:2339)
+	at org.eclipse.wst.xml.core.internal.document.DOMModelImpl.nodesReplaced(DOMModelImpl.java:737)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument._fireEvent(BasicStructuredDocument.java:600)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.fireStructuredDocumentEvent(BasicStructuredDocument.java:1198)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.internalReplaceText(BasicStructuredDocument.java:1979)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2423)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2408)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$2(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$3.run(JobSafeStructuredDocument.java:141)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:149)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replaceText(JobSafeStructuredDocument.java:144)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replace(BasicStructuredDocument.java:2368)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$0(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$1.run(JobSafeStructuredDocument.java:103)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:149)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replace(JobSafeStructuredDocument.java:106)
+	at org.eclipse.jface.text.projection.ProjectionTextStore.replace(ProjectionTextStore.java:111)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1184)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1210)
+	at org.eclipse.jface.text.projection.ProjectionDocument.replace(ProjectionDocument.java:629)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.replaceTextRange(DefaultDocumentAdapter.java:248)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:7308)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:8159)
+	at org.eclipse.swt.custom.StyledText.doContent(StyledText.java:2502)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:5967)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5998)
+	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5685)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4481)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1331)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1355)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1340)
+	at org.eclipse.swt.widgets.Widget.sendIMKeyEvent(Widget.java:1417)
+	at org.eclipse.swt.widgets.Control.gtk_commit(Control.java:3107)
+	at org.eclipse.swt.widgets.Canvas.gtk_commit(Canvas.java:163)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1963)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5692)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4717)
+	at org.eclipse.swt.internal.gtk.OS._gtk_im_context_filter_keypress(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_im_context_filter_keypress(OS.java:8709)
+	at org.eclipse.swt.widgets.Control.filterKey(Control.java:2443)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:3325)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:793)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1982)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5692)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4717)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:9326)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1225)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2435)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3428)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1488)
+!SESSION 2017-12-06 10:39:21.176 -----------------------------------------------
+eclipse.buildId=1.3
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2017-12-06 10:39:57.815
+!MESSAGE SDK Information: Path [/home/kira/tizen1], Data Path [/home/kira/tizen-studio-data.1], Platform Path [/home/kira/tizen1/platforms/tizen-3.0/wearable]
+
+!ENTRY org.tizen.common.connection.toolbar.EmulatorLaunchWorker 4 0 2017-12-06 11:27:03.336
+!MESSAGE [2017.12.06 11:27:03][ERROR] EmulatorLaunchWorker.java(93) - Emulator has been booted up: M-3.0-x86
+
+!SESSION 2017-12-06 11:43:36.584 -----------------------------------------------
+eclipse.buildId=1.3
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-12-06 11:43:44.981
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2017-12-06 11:44:07.377
+!MESSAGE SDK Information: Path [/home/kira/tizen1], Data Path [/home/kira/tizen-studio-data.1], Platform Path [/home/kira/tizen1/platforms/tizen-3.0/wearable]
+
+!ENTRY org.tizen.common.connection.toolbar.TargetToolBarManager 4 0 2017-12-06 11:45:32.371
+!MESSAGE [2017.12.06 11:45:32][ERROR] TargetToolBarManager.java(210) - Failed to get platform capability
+
+!STACK 0
+org.tizen.sdblib.exception.SdbCommandRejectedException: closed
+	at org.tizen.sdblib.SdbHelper.sendServiceRequest(SdbHelper.java:507)
+	at org.tizen.sdblib.PlatformCapability.loadPlatformCapability(PlatformCapability.java:155)
+	at org.tizen.sdblib.PlatformCapability.<init>(PlatformCapability.java:151)
+	at org.tizen.sdblib.Device.getPlatformCapability(Device.java:802)
+	at org.tizen.common.connection.toolbar.TargetToolBarManager.updateDeviceDescriptor(TargetToolBarManager.java:205)
+	at org.tizen.common.connection.toolbar.ToolbarContributor.targetsChanged(ToolbarContributor.java:160)
+	at org.tizen.common.connection.toolbar.TargetToolBarManager.fireLaunchTargetsChanged(TargetToolBarManager.java:107)
+	at org.tizen.common.connection.toolbar.TargetToolBarManager.onConnected(TargetToolBarManager.java:249)
+	at org.tizen.sdblib.SmartDevelopmentBridge.deviceConnected(SmartDevelopmentBridge.java:553)
+	at org.tizen.sdblib.DeviceMonitor.updateDevices(DeviceMonitor.java:342)
+	at org.tizen.sdblib.DeviceMonitor.processIncomingDeviceData(DeviceMonitor.java:241)
+	at org.tizen.sdblib.DeviceMonitor.process(DeviceMonitor.java:426)
+	at org.tizen.sdblib.daemon.AbstractServer.run(AbstractServer.java:239)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.tizen.common.util.SdbCommandUtil 4 0 2017-12-06 11:45:32.629
+!MESSAGE [2017.12.06 11:45:32][ERROR] SdbCommandUtil.java(103) - Cannot check whether a device supports multiuser or not. 0000da6200001300
+
+!STACK 0
+org.tizen.sdblib.exception.SdbCommandRejectedException: closed
+	at org.tizen.sdblib.SdbHelper.sendServiceRequest(SdbHelper.java:507)
+	at org.tizen.sdblib.PlatformCapability.loadPlatformCapability(PlatformCapability.java:155)
+	at org.tizen.sdblib.PlatformCapability.<init>(PlatformCapability.java:151)
+	at org.tizen.sdblib.Device.getPlatformCapability(Device.java:802)
+	at org.tizen.common.util.SdbCommandUtil.isMultiUserDevice(SdbCommandUtil.java:95)
+	at org.tizen.common.connection.debugtools.OnDemandInstall.<init>(OnDemandInstall.java:91)
+	at org.tizen.common.connection.explorer.ConnectionExplorerPanel.onConnected(ConnectionExplorerPanel.java:1204)
+	at org.tizen.sdblib.SmartDevelopmentBridge.deviceConnected(SmartDevelopmentBridge.java:553)
+	at org.tizen.sdblib.DeviceMonitor.updateDevices(DeviceMonitor.java:342)
+	at org.tizen.sdblib.DeviceMonitor.processIncomingDeviceData(DeviceMonitor.java:241)
+	at org.tizen.sdblib.DeviceMonitor.process(DeviceMonitor.java:426)
+	at org.tizen.sdblib.daemon.AbstractServer.run(AbstractServer.java:239)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2017-12-06 11:45:32.756
+!MESSAGE [2017.12.06 11:45:32][ERROR] ConnectionExplorerLabelProvider.java(102) - Failed to get platform capability
+
+!SESSION 2017-12-06 11:48:14.272 -----------------------------------------------
+eclipse.buildId=1.3
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-12-06 11:48:18.360
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2017-12-06 11:48:27.681
+!MESSAGE SDK Information: Path [/home/kira/tizen1], Data Path [/home/kira/tizen-studio-data.1], Platform Path [/home/kira/tizen1/platforms/tizen-3.0/wearable]
+
+!ENTRY org.tizen.common.connection.toolbar.TargetToolBarManager 4 0 2017-12-06 11:50:15.998
+!MESSAGE [2017.12.06 11:50:15][ERROR] TargetToolBarManager.java(210) - Failed to get platform capability
+
+!STACK 0
+org.tizen.sdblib.exception.SdbCommandRejectedException: closed
+	at org.tizen.sdblib.SdbHelper.sendServiceRequest(SdbHelper.java:507)
+	at org.tizen.sdblib.PlatformCapability.loadPlatformCapability(PlatformCapability.java:155)
+	at org.tizen.sdblib.PlatformCapability.<init>(PlatformCapability.java:151)
+	at org.tizen.sdblib.Device.getPlatformCapability(Device.java:802)
+	at org.tizen.common.connection.toolbar.TargetToolBarManager.updateDeviceDescriptor(TargetToolBarManager.java:205)
+	at org.tizen.common.connection.toolbar.ToolbarContributor.targetsChanged(ToolbarContributor.java:160)
+	at org.tizen.common.connection.toolbar.TargetToolBarManager.fireLaunchTargetsChanged(TargetToolBarManager.java:107)
+	at org.tizen.common.connection.toolbar.TargetToolBarManager.onConnected(TargetToolBarManager.java:249)
+	at org.tizen.sdblib.SmartDevelopmentBridge.deviceConnected(SmartDevelopmentBridge.java:553)
+	at org.tizen.sdblib.DeviceMonitor.updateDevices(DeviceMonitor.java:342)
+	at org.tizen.sdblib.DeviceMonitor.processIncomingDeviceData(DeviceMonitor.java:241)
+	at org.tizen.sdblib.DeviceMonitor.process(DeviceMonitor.java:426)
+	at org.tizen.sdblib.daemon.AbstractServer.run(AbstractServer.java:239)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.tizen.common.util.SdbCommandUtil 4 0 2017-12-06 11:50:16.353
+!MESSAGE [2017.12.06 11:50:16][ERROR] SdbCommandUtil.java(103) - Cannot check whether a device supports multiuser or not. 0000da6200001300
+
+!STACK 0
+org.tizen.sdblib.exception.SdbCommandRejectedException: closed
+	at org.tizen.sdblib.SdbHelper.sendServiceRequest(SdbHelper.java:507)
+	at org.tizen.sdblib.PlatformCapability.loadPlatformCapability(PlatformCapability.java:155)
+	at org.tizen.sdblib.PlatformCapability.<init>(PlatformCapability.java:151)
+	at org.tizen.sdblib.Device.getPlatformCapability(Device.java:802)
+	at org.tizen.common.util.SdbCommandUtil.isMultiUserDevice(SdbCommandUtil.java:95)
+	at org.tizen.common.connection.debugtools.OnDemandInstall.<init>(OnDemandInstall.java:91)
+	at org.tizen.common.connection.explorer.ConnectionExplorerPanel.onConnected(ConnectionExplorerPanel.java:1204)
+	at org.tizen.sdblib.SmartDevelopmentBridge.deviceConnected(SmartDevelopmentBridge.java:553)
+	at org.tizen.sdblib.DeviceMonitor.updateDevices(DeviceMonitor.java:342)
+	at org.tizen.sdblib.DeviceMonitor.processIncomingDeviceData(DeviceMonitor.java:241)
+	at org.tizen.sdblib.DeviceMonitor.process(DeviceMonitor.java:426)
+	at org.tizen.sdblib.daemon.AbstractServer.run(AbstractServer.java:239)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2017-12-06 11:50:16.589
+!MESSAGE [2017.12.06 11:50:16][ERROR] ConnectionExplorerLabelProvider.java(102) - Failed to get platform capability
+
+
+!ENTRY org.eclipse.e4.ui.workbench.swt 4 2 2017-12-06 11:50:28.131
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.e4.ui.workbench.swt".
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.SWT.error(SWT.java:4377)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:484)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:420)
+	at org.eclipse.swt.widgets.Widget.checkParent(Widget.java:358)
+	at org.eclipse.swt.widgets.Widget.<init>(Widget.java:241)
+	at org.eclipse.swt.widgets.Control.<init>(Control.java:107)
+	at org.eclipse.swt.widgets.Scrollable.<init>(Scrollable.java:74)
+	at org.eclipse.swt.widgets.Composite.<init>(Composite.java:107)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$2.<init>(ContributedPartRenderer.java:80)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:80)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:971)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:640)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:746)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:711)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:695)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.createElement(PartServiceImpl.java:1209)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1170)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:400)
+	at org.eclipse.ui.internal.EditorReference.getEditor(EditorReference.java:289)
+	at org.eclipse.ui.internal.WorkbenchPage.findEditor(WorkbenchPage.java:2237)
+	at org.tizen.dynamicanalysis.ide.eplugin.Activator$1$1.visit(Activator.java:106)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:63)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:47)
+	at org.tizen.dynamicanalysis.ide.eplugin.Activator$1.resourceChanged(Activator.java:97)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:373)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1470)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2250)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.buildForLaunch(ZimLaunchDelegate.java:451)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2017-12-06 11:50:28.132
+!MESSAGE Exception occurred while rendering: org.eclipse.e4.ui.model.application.ui.basic.impl.PartImpl@26b95b0b (elementId: org.eclipse.e4.ui.compatibility.editor, tags: [Editor, org.tizen.web.editor.javascript.JavascriptEditor, removeOnHide], contributorURI: null) (widget: null, renderer: org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer@2762253e, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (contributionURI: bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor, object: null, context: PartImpl (org.eclipse.e4.ui.compatibility.editor) Context, variables: [], label: main.js, iconURI: platform:/plugin/org.tizen.web.editor.javascript/icons/javascript_file.png, tooltip: null, dirty: false, closeable: true, description: null)
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.SWT.error(SWT.java:4377)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:484)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:420)
+	at org.eclipse.swt.widgets.Widget.checkParent(Widget.java:358)
+	at org.eclipse.swt.widgets.Widget.<init>(Widget.java:241)
+	at org.eclipse.swt.widgets.Control.<init>(Control.java:107)
+	at org.eclipse.swt.widgets.Scrollable.<init>(Scrollable.java:74)
+	at org.eclipse.swt.widgets.Composite.<init>(Composite.java:107)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$2.<init>(ContributedPartRenderer.java:80)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:80)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:971)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:640)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:746)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:711)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:695)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.createElement(PartServiceImpl.java:1209)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1170)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:400)
+	at org.eclipse.ui.internal.EditorReference.getEditor(EditorReference.java:289)
+	at org.eclipse.ui.internal.WorkbenchPage.findEditor(WorkbenchPage.java:2237)
+	at org.tizen.dynamicanalysis.ide.eplugin.Activator$1$1.visit(Activator.java:106)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:63)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:47)
+	at org.tizen.dynamicanalysis.ide.eplugin.Activator$1.resourceChanged(Activator.java:97)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:373)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1470)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2250)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.buildForLaunch(ZimLaunchDelegate.java:451)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2017-12-06 11:50:29.611
+!MESSAGE java.io.IOException: Certificate file not found : /home/artem/SamsungCertificate/WhYouDied/author.p12
+!STACK 0
+java.io.FileNotFoundException: /home/artem/SamsungCertificate/WhYouDied/author.p12
+	at org.tizen.common.sign.signer.TizenIncrementalSigner.loadKeyStore(TizenIncrementalSigner.java:999)
+	at org.tizen.common.sign.signer.TizenIncrementalSigner.loadKeyStore(TizenIncrementalSigner.java:975)
+	at org.tizen.common.sign.signer.TizenIncrementalSigner.checkCertificatePassword(TizenIncrementalSigner.java:1293)
+	at org.tizen.common.sign.command.ReadSigningProfileFileCommand.checkPkcs12Password(ReadSigningProfileFileCommand.java:136)
+	at org.tizen.common.sign.command.ReadSigningProfileFileCommand.validateSigningInfo(ReadSigningProfileFileCommand.java:163)
+	at org.tizen.common.sign.command.ReadSigningProfileFileCommand.run(ReadSigningProfileFileCommand.java:114)
+	at org.tizen.common.core.command.Executor.execute(Executor.java:164)
+	at org.tizen.common.core.command.Executor.execute(Executor.java:150)
+	at org.tizen.common.sign.signer.SignatureGenerator.loadProfiles(SignatureGenerator.java:129)
+	at org.tizen.common.sign.signer.TizenCommonSigner.doSign(TizenCommonSigner.java:136)
+	at org.tizen.common.packager.core.PackageCommand.generateSignResources(PackageCommand.java:182)
+	at org.tizen.common.packager.core.PackageCommand.run(PackageCommand.java:101)
+	at org.tizen.common.core.command.Executor.execute(Executor.java:164)
+	at org.tizen.common.core.command.Executor.execute(Executor.java:150)
+	at org.tizen.web.packager.ui.WebPackager.createPackage(WebPackager.java:403)
+	at org.tizen.web.packager.ui.WebPackager.createPackage(WebPackager.java:198)
+	at org.tizen.web.packager.ui.WebPackager.createPackage(WebPackager.java:134)
+	at org.tizen.web.zimlaunch.step.PackageStep.executeStep(PackageStep.java:100)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:109)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:310)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.tizen.web.zimlaunch.step.InstallStep 4 0 2017-12-06 11:54:16.323
+!MESSAGE [2017.12.06 11:54:16][ERROR] InstallStep.java(142) - Return Code:35)sdb command error exception
+
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2017-12-06 11:54:16.353
+!MESSAGE Installing the package... > Fail
+!STACK 0
+org.tizen.web.zimlaunch.exception.TizenWebIDEException: Unexpected error occurred at the below step.
+ `Installing the package...`
+Please try again later.
+	at org.tizen.web.zimlaunch.step.InstallStep.executeStep(InstallStep.java:144)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:109)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:310)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.tizen.common.connection.toolbar.EmulatorLaunchWorker 4 0 2017-12-06 11:54:17.910
+!MESSAGE [2017.12.06 11:54:17][ERROR] EmulatorLaunchWorker.java(73) - Timeout to wait for emulator booting done
+
+
+!ENTRY org.tizen.web.zimlaunch.step.InstallStep 4 0 2017-12-06 11:54:49.477
+!MESSAGE [2017.12.06 11:54:49][ERROR] InstallStep.java(142) - Return Code:35)sdb command error exception
+
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2017-12-06 11:54:49.522
+!MESSAGE Installing the package... > Fail
+!STACK 0
+org.tizen.web.zimlaunch.exception.TizenWebIDEException: Unexpected error occurred at the below step.
+ `Installing the package...`
+Please try again later.
+	at org.tizen.web.zimlaunch.step.InstallStep.executeStep(InstallStep.java:144)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:109)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:310)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.tizen.web.zimlaunch.step.InstallStep 4 0 2017-12-06 11:55:46.193
+!MESSAGE [2017.12.06 11:55:46][ERROR] InstallStep.java(142) - Return Code:35)sdb command error exception
+
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2017-12-06 11:55:46.235
+!MESSAGE Installing the package... > Fail
+!STACK 0
+org.tizen.web.zimlaunch.exception.TizenWebIDEException: Unexpected error occurred at the below step.
+ `Installing the package...`
+Please try again later.
+	at org.tizen.web.zimlaunch.step.InstallStep.executeStep(InstallStep.java:144)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:109)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:310)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.tizen.common.connection.toolbar.TargetToolBarManager 4 0 2017-12-06 11:56:07.165
+!MESSAGE [2017.12.06 11:56:07][ERROR] TargetToolBarManager.java(390) - Failed to launch VM: [M-3.0-x86] is running now...
+
+
+!ENTRY org.eclipse.ui 4 0 2017-12-06 11:56:32.534
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (org.eclipse.swt.SWTException: Widget is disposed)
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3794)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3433)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1488)
+Caused by: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.SWT.error(SWT.java:4377)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:484)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:419)
+	at org.eclipse.swt.widgets.OriginalText.getTextChars(OriginalText.java:1321)
+	at org.eclipse.swt.widgets.OriginalText.getText(OriginalText.java:1258)
+	at org.eclipse.swt.custom.TizenText.getText(TizenText.java:425)
+	at org.tizen.common.cert.ui.DuidListView.isExist(DuidListView.java:270)
+	at org.tizen.common.cert.ui.DuidListView.setInput(DuidListView.java:246)
+	at org.tizen.common.cert.ui.DistributorCreationPage$6.run(DistributorCreationPage.java:401)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 24 more
+
+!ENTRY org.tizen.common.connection.toolbar.EmulatorLaunchWorker 4 0 2017-12-06 11:56:47.350
+!MESSAGE [2017.12.06 11:56:47][ERROR] EmulatorLaunchWorker.java(93) - Emulator has been booted up: M-3.0-x86
+
+
+!ENTRY org.tizen.common.connection.toolbar.TargetToolBarManager 4 0 2017-12-06 11:57:16.538
+!MESSAGE [2017.12.06 11:57:16][ERROR] TargetToolBarManager.java(210) - Failed to get platform capability
+
+!STACK 0
+org.tizen.sdblib.exception.SdbCommandRejectedException: closed
+	at org.tizen.sdblib.SdbHelper.sendServiceRequest(SdbHelper.java:507)
+	at org.tizen.sdblib.PlatformCapability.loadPlatformCapability(PlatformCapability.java:155)
+	at org.tizen.sdblib.PlatformCapability.<init>(PlatformCapability.java:151)
+	at org.tizen.sdblib.Device.getPlatformCapability(Device.java:802)
+	at org.tizen.common.connection.toolbar.TargetToolBarManager.updateDeviceDescriptor(TargetToolBarManager.java:205)
+	at org.tizen.common.connection.toolbar.ToolbarContributor.targetsChanged(ToolbarContributor.java:160)
+	at org.tizen.common.connection.toolbar.TargetToolBarManager.fireLaunchTargetsChanged(TargetToolBarManager.java:107)
+	at org.tizen.common.connection.toolbar.TargetToolBarManager.onConnected(TargetToolBarManager.java:249)
+	at org.tizen.sdblib.SmartDevelopmentBridge.deviceConnected(SmartDevelopmentBridge.java:553)
+	at org.tizen.sdblib.DeviceMonitor.updateDevices(DeviceMonitor.java:342)
+	at org.tizen.sdblib.DeviceMonitor.processIncomingDeviceData(DeviceMonitor.java:241)
+	at org.tizen.sdblib.DeviceMonitor.process(DeviceMonitor.java:426)
+	at org.tizen.sdblib.daemon.AbstractServer.run(AbstractServer.java:239)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.tizen.common.util.SdbCommandUtil 4 0 2017-12-06 11:57:17.184
+!MESSAGE [2017.12.06 11:57:17][ERROR] SdbCommandUtil.java(103) - Cannot check whether a device supports multiuser or not. 0000da6200001300
+
+!STACK 0
+org.tizen.sdblib.exception.SdbCommandRejectedException: closed
+	at org.tizen.sdblib.SdbHelper.sendServiceRequest(SdbHelper.java:507)
+	at org.tizen.sdblib.PlatformCapability.loadPlatformCapability(PlatformCapability.java:155)
+	at org.tizen.sdblib.PlatformCapability.<init>(PlatformCapability.java:151)
+	at org.tizen.sdblib.Device.getPlatformCapability(Device.java:802)
+	at org.tizen.common.util.SdbCommandUtil.isMultiUserDevice(SdbCommandUtil.java:95)
+	at org.tizen.common.connection.debugtools.OnDemandInstall.<init>(OnDemandInstall.java:91)
+	at org.tizen.common.connection.explorer.ConnectionExplorerPanel.onConnected(ConnectionExplorerPanel.java:1204)
+	at org.tizen.sdblib.SmartDevelopmentBridge.deviceConnected(SmartDevelopmentBridge.java:553)
+	at org.tizen.sdblib.DeviceMonitor.updateDevices(DeviceMonitor.java:342)
+	at org.tizen.sdblib.DeviceMonitor.processIncomingDeviceData(DeviceMonitor.java:241)
+	at org.tizen.sdblib.DeviceMonitor.process(DeviceMonitor.java:426)
+	at org.tizen.sdblib.daemon.AbstractServer.run(AbstractServer.java:239)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2017-12-06 11:57:17.348
+!MESSAGE [2017.12.06 11:57:17][ERROR] ConnectionExplorerLabelProvider.java(102) - Failed to get platform capability
+
+
+!ENTRY org.eclipse.ui 4 0 2017-12-06 11:57:17.673
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (org.eclipse.swt.SWTException: Widget is disposed)
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3794)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3433)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1488)
+Caused by: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.SWT.error(SWT.java:4377)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:484)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:419)
+	at org.eclipse.swt.widgets.OriginalText.getTextChars(OriginalText.java:1321)
+	at org.eclipse.swt.widgets.OriginalText.getText(OriginalText.java:1258)
+	at org.eclipse.swt.custom.TizenText.getText(TizenText.java:425)
+	at org.tizen.common.cert.ui.DuidListView.isExist(DuidListView.java:270)
+	at org.tizen.common.cert.ui.DuidListView.setInput(DuidListView.java:246)
+	at org.tizen.common.cert.ui.DistributorCreationPage$6.run(DistributorCreationPage.java:401)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 24 more
+
+!ENTRY org.tizen.common.connection.explorer.ConnectionExplorerLabelProvider 4 0 2017-12-06 11:57:41.772
+!MESSAGE [2017.12.06 11:57:41][ERROR] ConnectionExplorerLabelProvider.java(102) - Failed to get platform capability
+
+
+!ENTRY org.tizen.web.zimlaunch.step.InstallStep 4 0 2017-12-06 11:57:54.541
+!MESSAGE [2017.12.06 11:57:54][ERROR] InstallStep.java(142) - Return Code:35)sdb command error exception
+
+
+!ENTRY org.tizen.web.zimlaunch 4 0 2017-12-06 11:57:54.581
+!MESSAGE Installing the package... > Fail
+!STACK 0
+org.tizen.web.zimlaunch.exception.TizenWebIDEException: Unexpected error occurred at the below step.
+ `Installing the package...`
+Please try again later.
+	at org.tizen.web.zimlaunch.step.InstallStep.executeStep(InstallStep.java:144)
+	at org.tizen.web.zimlaunch.core.CompositeStep.executeStep(CompositeStep.java:109)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.launch(ZimLaunchDelegate.java:310)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui 4 0 2017-12-06 11:59:26.022
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (org.eclipse.swt.SWTException: Widget is disposed)
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3794)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3433)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1488)
+Caused by: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.SWT.error(SWT.java:4377)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:484)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:419)
+	at org.eclipse.swt.widgets.OriginalText.getTextChars(OriginalText.java:1321)
+	at org.eclipse.swt.widgets.OriginalText.getText(OriginalText.java:1258)
+	at org.eclipse.swt.custom.TizenText.getText(TizenText.java:425)
+	at org.tizen.common.cert.ui.DuidListView.isExist(DuidListView.java:270)
+	at org.tizen.common.cert.ui.DuidListView.setInput(DuidListView.java:246)
+	at org.tizen.common.cert.ui.DistributorCreationPage$6.run(DistributorCreationPage.java:401)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 24 more
+
+!ENTRY org.tizen.common.connection.toolbar.EmulatorLaunchWorker 4 0 2017-12-06 12:04:04.293
+!MESSAGE [2017.12.06 12:04:04][ERROR] EmulatorLaunchWorker.java(73) - Timeout to wait for emulator booting done
+
+
+!ENTRY org.tizen.common.connection.toolbar.TargetToolBarManager 4 0 2017-12-06 12:10:19.759
+!MESSAGE [2017.12.06 12:10:19][ERROR] TargetToolBarManager.java(384) - Failed to get VM property
+
+
+!ENTRY org.tizen.common.connection.toolbar.TargetToolBarManager 4 0 2017-12-06 12:10:53.037
+!MESSAGE [2017.12.06 12:10:53][ERROR] TargetToolBarManager.java(384) - Failed to get VM property
+
+
+!ENTRY org.tizen.common.connection.toolbar.TargetToolBarManager 4 0 2017-12-06 12:10:54.729
+!MESSAGE [2017.12.06 12:10:54][ERROR] TargetToolBarManager.java(384) - Failed to get VM property
+
+
+!ENTRY org.tizen.common.connection.toolbar.TargetToolBarManager 4 0 2017-12-06 12:12:03.096
+!MESSAGE [2017.12.06 12:12:03][ERROR] TargetToolBarManager.java(384) - Failed to get VM property
+
+
+!ENTRY org.tizen.common.connection.toolbar.TargetToolBarManager 4 0 2017-12-06 12:12:20.683
+!MESSAGE [2017.12.06 12:12:20][ERROR] TargetToolBarManager.java(384) - Failed to get VM property
+
+
+!ENTRY org.tizen.common.connection.toolbar.TargetToolBarManager 4 0 2017-12-06 12:13:50.022
+!MESSAGE [2017.12.06 12:13:50][ERROR] TargetToolBarManager.java(384) - Failed to get VM property
+
+!SESSION 2017-12-06 12:14:10.201 -----------------------------------------------
+eclipse.buildId=1.3
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2017-12-06 12:14:38.369
+!MESSAGE SDK Information: Path [/home/kira/tizen1], Data Path [/home/kira/tizen-studio-data.1], Platform Path [/home/kira/tizen1/platforms/tizen-3.0/wearable]
+
+!ENTRY org.tizen.common.connection.toolbar.EmulatorLaunchWorker 4 0 2017-12-06 12:15:07.774
+!MESSAGE [2017.12.06 12:15:07][ERROR] EmulatorLaunchWorker.java(93) - Emulator has been booted up: M-3.0-x86
+
+
+!ENTRY org.eclipse.e4.ui.workbench.swt 4 2 2017-12-06 12:15:17.277
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.e4.ui.workbench.swt".
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.SWT.error(SWT.java:4377)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:484)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:420)
+	at org.eclipse.swt.widgets.Widget.checkParent(Widget.java:358)
+	at org.eclipse.swt.widgets.Widget.<init>(Widget.java:241)
+	at org.eclipse.swt.widgets.Control.<init>(Control.java:107)
+	at org.eclipse.swt.widgets.Scrollable.<init>(Scrollable.java:74)
+	at org.eclipse.swt.widgets.Composite.<init>(Composite.java:107)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$2.<init>(ContributedPartRenderer.java:80)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:80)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:971)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:640)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:746)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:711)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:695)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.createElement(PartServiceImpl.java:1209)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1170)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:400)
+	at org.eclipse.ui.internal.EditorReference.getEditor(EditorReference.java:289)
+	at org.eclipse.ui.internal.WorkbenchPage.findEditor(WorkbenchPage.java:2237)
+	at org.tizen.dynamicanalysis.ide.eplugin.Activator$1$1.visit(Activator.java:106)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:63)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:47)
+	at org.tizen.dynamicanalysis.ide.eplugin.Activator$1.resourceChanged(Activator.java:97)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:373)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1470)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2250)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.buildForLaunch(ZimLaunchDelegate.java:451)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2017-12-06 12:15:17.278
+!MESSAGE Exception occurred while rendering: org.eclipse.e4.ui.model.application.ui.basic.impl.PartImpl@9596ce8 (elementId: org.eclipse.e4.ui.compatibility.editor, tags: [Editor, org.tizen.web.editor.javascript.JavascriptEditor, removeOnHide], contributorURI: null) (widget: null, renderer: org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer@74e2cfc5, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (contributionURI: bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor, object: null, context: PartImpl (org.eclipse.e4.ui.compatibility.editor) Context, variables: [], label: main.js, iconURI: platform:/plugin/org.tizen.web.editor.javascript/icons/javascript_file.png, tooltip: null, dirty: false, closeable: true, description: null)
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.SWT.error(SWT.java:4377)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:484)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:420)
+	at org.eclipse.swt.widgets.Widget.checkParent(Widget.java:358)
+	at org.eclipse.swt.widgets.Widget.<init>(Widget.java:241)
+	at org.eclipse.swt.widgets.Control.<init>(Control.java:107)
+	at org.eclipse.swt.widgets.Scrollable.<init>(Scrollable.java:74)
+	at org.eclipse.swt.widgets.Composite.<init>(Composite.java:107)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$2.<init>(ContributedPartRenderer.java:80)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:80)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:971)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:640)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:746)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:711)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:695)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.createElement(PartServiceImpl.java:1209)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1170)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:400)
+	at org.eclipse.ui.internal.EditorReference.getEditor(EditorReference.java:289)
+	at org.eclipse.ui.internal.WorkbenchPage.findEditor(WorkbenchPage.java:2237)
+	at org.tizen.dynamicanalysis.ide.eplugin.Activator$1$1.visit(Activator.java:106)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:63)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:47)
+	at org.tizen.dynamicanalysis.ide.eplugin.Activator$1.resourceChanged(Activator.java:97)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:373)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1470)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2250)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.buildForLaunch(ZimLaunchDelegate.java:451)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.tizen.common.connection.toolbar.EmulatorLaunchWorker 4 0 2017-12-06 12:26:03.526
+!MESSAGE [2017.12.06 12:26:03][ERROR] EmulatorLaunchWorker.java(73) - Timeout to wait for emulator booting done
+
+!SESSION 2017-12-17 02:18:52.359 -----------------------------------------------
+eclipse.buildId=1.3
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2017-12-17 02:19:26.690
+!MESSAGE SDK Information: Path [/home/kira/tizen1], Data Path [/home/kira/tizen-studio-data.1], Platform Path [/home/kira/tizen1/platforms/tizen-3.0/wearable]
+
+!ENTRY org.tizen.common.connection.toolbar.EmulatorLaunchWorker 4 0 2017-12-17 02:21:07.653
+!MESSAGE [2017.12.17 02:21:07][ERROR] EmulatorLaunchWorker.java(98) - Timeout occurred to get (emulator-26101) booting done msg: error: target offline
+
+
+!ENTRY org.tizen.common.connection.toolbar.TargetToolBarManager 4 0 2017-12-17 02:21:07.697
+!MESSAGE [2017.12.17 02:21:07][ERROR] TargetToolBarManager.java(210) - Failed to get platform capability
+
+!STACK 0
+org.tizen.sdblib.exception.SdbCommandRejectedException: error: target offline
+	at org.tizen.sdblib.SdbHelper.initializeDevice(SdbHelper.java:477)
+	at org.tizen.sdblib.SdbHelper.sendServiceRequest(SdbHelper.java:499)
+	at org.tizen.sdblib.PlatformCapability.loadPlatformCapability(PlatformCapability.java:155)
+	at org.tizen.sdblib.PlatformCapability.<init>(PlatformCapability.java:151)
+	at org.tizen.sdblib.Device.getPlatformCapability(Device.java:802)
+	at org.tizen.common.connection.toolbar.TargetToolBarManager.updateDeviceDescriptor(TargetToolBarManager.java:205)
+	at org.tizen.common.connection.toolbar.ToolbarContributor.targetsChanged(ToolbarContributor.java:160)
+	at org.tizen.common.connection.toolbar.TargetToolBarManager.fireLaunchTargetsChanged(TargetToolBarManager.java:107)
+	at org.tizen.common.connection.toolbar.TargetToolBarManager.onConnected(TargetToolBarManager.java:249)
+	at org.tizen.sdblib.SmartDevelopmentBridge.deviceConnected(SmartDevelopmentBridge.java:553)
+	at org.tizen.sdblib.DeviceMonitor.updateDevices(DeviceMonitor.java:342)
+	at org.tizen.sdblib.DeviceMonitor.processIncomingDeviceData(DeviceMonitor.java:241)
+	at org.tizen.sdblib.DeviceMonitor.process(DeviceMonitor.java:426)
+	at org.tizen.sdblib.daemon.AbstractServer.run(AbstractServer.java:239)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.tizen.common.connection.toolbar.EmulatorLaunchWorker 4 0 2017-12-17 02:24:56.342
+!MESSAGE [2017.12.17 02:24:56][ERROR] EmulatorLaunchWorker.java(73) - Timeout to wait for emulator booting done
+
+
+!ENTRY org.tizen.common.connection.toolbar.EmulatorLaunchWorker 4 0 2017-12-17 02:25:47.706
+!MESSAGE [2017.12.17 02:25:47][ERROR] EmulatorLaunchWorker.java(73) - Timeout to wait for emulator booting done
+
+!SESSION 2017-12-19 21:30:46.908 -----------------------------------------------
+eclipse.buildId=1.3
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2017-12-19 21:31:20.793
+!MESSAGE SDK Information: Path [/home/kira/tizen1], Data Path [/home/kira/tizen-studio-data.1], Platform Path [/home/kira/tizen1/platforms/tizen-3.0/wearable]
+
+!ENTRY org.tizen.common.connection.toolbar.EmulatorLaunchWorker 4 0 2017-12-19 22:47:03.410
+!MESSAGE [2017.12.19 22:47:03][ERROR] EmulatorLaunchWorker.java(93) - Emulator has been booted up: M-3.0-x86
+
+
+!ENTRY org.eclipse.e4.ui.workbench.swt 4 2 2017-12-19 22:47:07.641
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.e4.ui.workbench.swt".
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.SWT.error(SWT.java:4377)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:484)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:420)
+	at org.eclipse.swt.widgets.Widget.checkParent(Widget.java:358)
+	at org.eclipse.swt.widgets.Widget.<init>(Widget.java:241)
+	at org.eclipse.swt.widgets.Control.<init>(Control.java:107)
+	at org.eclipse.swt.widgets.Scrollable.<init>(Scrollable.java:74)
+	at org.eclipse.swt.widgets.Composite.<init>(Composite.java:107)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$2.<init>(ContributedPartRenderer.java:80)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:80)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:971)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:640)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:746)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:711)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:695)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.createElement(PartServiceImpl.java:1209)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1170)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:400)
+	at org.eclipse.ui.internal.EditorReference.getEditor(EditorReference.java:289)
+	at org.eclipse.ui.internal.WorkbenchPage.findEditor(WorkbenchPage.java:2237)
+	at org.tizen.dynamicanalysis.ide.eplugin.Activator$1$1.visit(Activator.java:106)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:63)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:47)
+	at org.tizen.dynamicanalysis.ide.eplugin.Activator$1.resourceChanged(Activator.java:97)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:373)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1470)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2250)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.buildForLaunch(ZimLaunchDelegate.java:451)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2017-12-19 22:47:07.642
+!MESSAGE Exception occurred while rendering: org.eclipse.e4.ui.model.application.ui.basic.impl.PartImpl@78010562 (elementId: org.eclipse.e4.ui.compatibility.editor, tags: [Editor, org.tizen.web.editor.javascript.JavascriptEditor, removeOnHide], contributorURI: null) (widget: null, renderer: org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer@3a13f663, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (contributionURI: bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor, object: null, context: PartImpl (org.eclipse.e4.ui.compatibility.editor) Context, variables: [], label: main.js, iconURI: platform:/plugin/org.tizen.web.editor.javascript/icons/javascript_file.png, tooltip: null, dirty: false, closeable: true, description: null)
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.SWT.error(SWT.java:4377)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:484)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:420)
+	at org.eclipse.swt.widgets.Widget.checkParent(Widget.java:358)
+	at org.eclipse.swt.widgets.Widget.<init>(Widget.java:241)
+	at org.eclipse.swt.widgets.Control.<init>(Control.java:107)
+	at org.eclipse.swt.widgets.Scrollable.<init>(Scrollable.java:74)
+	at org.eclipse.swt.widgets.Composite.<init>(Composite.java:107)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$2.<init>(ContributedPartRenderer.java:80)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:80)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:971)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:640)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:746)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:711)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:695)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.createElement(PartServiceImpl.java:1209)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1170)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:400)
+	at org.eclipse.ui.internal.EditorReference.getEditor(EditorReference.java:289)
+	at org.eclipse.ui.internal.WorkbenchPage.findEditor(WorkbenchPage.java:2237)
+	at org.tizen.dynamicanalysis.ide.eplugin.Activator$1$1.visit(Activator.java:106)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:63)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:47)
+	at org.tizen.dynamicanalysis.ide.eplugin.Activator$1.resourceChanged(Activator.java:97)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:373)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1470)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2250)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.buildForLaunch(ZimLaunchDelegate.java:451)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.tizen.common.connection.toolbar.TargetToolBarManager 4 0 2017-12-19 22:54:21.228
+!MESSAGE [2017.12.19 22:54:21][ERROR] TargetToolBarManager.java(384) - Failed to get VM property
+
+
+!ENTRY org.tizen.common.connection.toolbar.TargetToolBarManager 4 0 2017-12-19 22:54:27.617
+!MESSAGE [2017.12.19 22:54:27][ERROR] TargetToolBarManager.java(384) - Failed to get VM property
+
+
+!ENTRY org.eclipse.core.jobs 2 2 2017-12-19 22:57:28.788
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.debug.internal.ui.DebugUIPlugin$8
+!SESSION 2017-12-19 22:57:30.218 -----------------------------------------------
+eclipse.buildId=1.3
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2017-12-19 22:57:57.495
+!MESSAGE SDK Information: Path [/home/kira/tizen1], Data Path [/home/kira/tizen-studio-data.1], Platform Path [/home/kira/tizen1/platforms/tizen-3.0/wearable]
+
+!ENTRY org.tizen.common.connection.toolbar.EmulatorLaunchWorker 4 0 2017-12-19 22:58:20.309
+!MESSAGE [2017.12.19 22:58:20][ERROR] EmulatorLaunchWorker.java(93) - Emulator has been booted up: M-3.0-x86
+
+
+!ENTRY org.eclipse.e4.ui.workbench.swt 4 2 2017-12-19 22:58:30.210
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.e4.ui.workbench.swt".
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.SWT.error(SWT.java:4377)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:484)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:420)
+	at org.eclipse.swt.widgets.Widget.checkParent(Widget.java:358)
+	at org.eclipse.swt.widgets.Widget.<init>(Widget.java:241)
+	at org.eclipse.swt.widgets.Control.<init>(Control.java:107)
+	at org.eclipse.swt.widgets.Scrollable.<init>(Scrollable.java:74)
+	at org.eclipse.swt.widgets.Composite.<init>(Composite.java:107)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$2.<init>(ContributedPartRenderer.java:80)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:80)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:971)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:640)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:746)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:711)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:695)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.createElement(PartServiceImpl.java:1209)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1170)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:400)
+	at org.eclipse.ui.internal.EditorReference.getEditor(EditorReference.java:289)
+	at org.eclipse.ui.internal.WorkbenchPage.findEditor(WorkbenchPage.java:2237)
+	at org.tizen.dynamicanalysis.ide.eplugin.Activator$1$1.visit(Activator.java:106)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:63)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:47)
+	at org.tizen.dynamicanalysis.ide.eplugin.Activator$1.resourceChanged(Activator.java:97)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:373)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1470)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2250)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.buildForLaunch(ZimLaunchDelegate.java:451)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2017-12-19 22:58:30.211
+!MESSAGE Exception occurred while rendering: org.eclipse.e4.ui.model.application.ui.basic.impl.PartImpl@9596ce8 (elementId: org.eclipse.e4.ui.compatibility.editor, tags: [Editor, org.tizen.web.editor.javascript.JavascriptEditor, removeOnHide], contributorURI: null) (widget: null, renderer: org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer@552cb0d5, toBeRendered: true, onTop: false, visible: true, containerData: null, accessibilityPhrase: null) (contributionURI: bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor, object: null, context: PartImpl (org.eclipse.e4.ui.compatibility.editor) Context, variables: [], label: main.js, iconURI: platform:/plugin/org.tizen.web.editor.javascript/icons/javascript_file.png, tooltip: null, dirty: false, closeable: true, description: null)
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.SWT.error(SWT.java:4377)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:484)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:420)
+	at org.eclipse.swt.widgets.Widget.checkParent(Widget.java:358)
+	at org.eclipse.swt.widgets.Widget.<init>(Widget.java:241)
+	at org.eclipse.swt.widgets.Control.<init>(Control.java:107)
+	at org.eclipse.swt.widgets.Scrollable.<init>(Scrollable.java:74)
+	at org.eclipse.swt.widgets.Composite.<init>(Composite.java:107)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$2.<init>(ContributedPartRenderer.java:80)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:80)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:971)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:640)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:746)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:711)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:695)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.createElement(PartServiceImpl.java:1209)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1170)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:400)
+	at org.eclipse.ui.internal.EditorReference.getEditor(EditorReference.java:289)
+	at org.eclipse.ui.internal.WorkbenchPage.findEditor(WorkbenchPage.java:2237)
+	at org.tizen.dynamicanalysis.ide.eplugin.Activator$1$1.visit(Activator.java:106)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:63)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:47)
+	at org.tizen.dynamicanalysis.ide.eplugin.Activator$1.resourceChanged(Activator.java:97)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:373)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1470)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2250)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.tizen.web.zimlaunch.deployer.ZimLaunchDelegate.buildForLaunch(ZimLaunchDelegate.java:451)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 2 2 2017-12-19 22:59:22.156
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.tizen.common.ui.statusbar.UpdateNotificationControl$2
+!SESSION 2017-12-24 19:42:36.947 -----------------------------------------------
+eclipse.buildId=1.3
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2017-12-24 19:43:08.023
+!MESSAGE SDK Information: Path [/home/kira/tizen1], Data Path [/home/kira/tizen-studio-data.1], Platform Path [/home/kira/tizen1/platforms/tizen-3.0/wearable]
+!SESSION 2017-12-26 01:49:56.869 -----------------------------------------------
+eclipse.buildId=1.3
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2017-12-26 01:50:30.383
+!MESSAGE SDK Information: Path [/home/kira/tizen1], Data Path [/home/kira/tizen-studio-data.1], Platform Path [/home/kira/tizen1/platforms/tizen-3.0/wearable]
+
+!ENTRY org.tizen.common.connection.toolbar.EmulatorLaunchWorker 4 0 2017-12-26 02:31:26.222
+!MESSAGE [2017.12.26 02:31:26][ERROR] EmulatorLaunchWorker.java(93) - Emulator has been booted up: M-3.0-x86
+
+!SESSION 2017-12-26 11:14:59.660 -----------------------------------------------
+eclipse.buildId=1.3
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2017-12-26 11:16:37.996
+!MESSAGE SDK Information: Path [/home/kira/tizen1], Data Path [/home/kira/tizen-studio-data.1], Platform Path [/home/kira/tizen1/platforms/tizen-3.0/wearable]
+!SESSION 2017-12-26 13:28:29.561 -----------------------------------------------
+eclipse.buildId=1.3
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2017-12-26 13:29:07.526
+!MESSAGE SDK Information: Path [/home/kira/tizen1], Data Path [/home/kira/tizen-studio-data.1], Platform Path [/home/kira/tizen1/platforms/tizen-3.0/wearable]
+!SESSION 2017-12-26 13:53:13.721 -----------------------------------------------
+eclipse.buildId=1.3
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2017-12-26 13:53:39.479
+!MESSAGE SDK Information: Path [/home/kira/tizen1], Data Path [/home/kira/tizen-studio-data.1], Platform Path [/home/kira/tizen1/platforms/tizen-3.0/wearable]
+!SESSION 2017-12-26 18:23:03.443 -----------------------------------------------
+eclipse.buildId=1.3
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2017-12-26 18:23:38.526
+!MESSAGE SDK Information: Path [/home/kira/tizen1], Data Path [/home/kira/tizen-studio-data.1], Platform Path [/home/kira/tizen1/platforms/tizen-3.0/wearable]
+!SESSION 2017-12-26 20:27:00.172 -----------------------------------------------
+eclipse.buildId=1.3
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -Dorg.eclipse.swt.browser.DefaultType=MOZILLA
+
+!ENTRY org.tizen.common.ui.Startup 1 0 2017-12-26 20:27:31.132
+!MESSAGE SDK Information: Path [/home/kira/tizen1], Data Path [/home/kira/tizen-studio-data.1], Platform Path [/home/kira/tizen1/platforms/tizen-3.0/wearable]
+
+!ENTRY org.tizen.common.connection.toolbar.TargetToolBarManager 4 0 2017-12-26 21:07:45.436
+!MESSAGE [2017.12.26 21:07:45][ERROR] TargetToolBarManager.java(390) - Failed to launch VM: [M-3.0-x86] is running now...
+
+
+!ENTRY org.eclipse.core.jobs 2 2 2017-12-26 21:11:59.864
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.debug.internal.ui.DebugUIPlugin$8

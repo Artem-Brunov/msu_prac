@@ -5,4 +5,9 @@
 <profileitem ca="" distributor="1" key="/home/artem/SamsungCertificate/WhYouDied/distributor.p12" password="zYMJkQ5qYa7kKBOvaeUdIsZhHK1z5dbL" rootca=""/>
 <profileitem ca="" distributor="2" key="" password="xmEcrXPl1ss=" rootca=""/>
 </profile>
+<profile name="SErt">
+<profileitem ca="" distributor="0" key="/home/kira/SamsungCertificate/SErt/author.p12" password="Paa9BO0B7TjGYRytc+XWyw==" rootca=""/>
+<profileitem ca="" distributor="1" key="/home/kira/SamsungCertificate/SErt/distributor.p12" password="Paa9BO0B7TjGYRytc+XWyw==" rootca=""/>
+<profileitem ca="" distributor="2" key="" password="xmEcrXPl1ss=" rootca=""/>
+</profile>
 </profiles>

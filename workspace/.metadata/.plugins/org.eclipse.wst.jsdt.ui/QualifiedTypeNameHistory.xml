@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="Function"/>
 <fullyQualifiedTypeName name="PlayerUtilManager"/>
+<fullyQualifiedTypeName name="Request"/>
+<fullyQualifiedTypeName name="Alarm"/>
+<fullyQualifiedTypeName name="Function"/>
 </qualifiedTypeNameHistroy>

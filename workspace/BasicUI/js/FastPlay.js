@@ -1,53 +1,42 @@
 
 function Play()
 {
-	 
-	 var yandex_translator = {
-             lines : {},
-             key:"dict.1.1.20171205T214425Z.b84e3547a503df3d.8a10897de7d9d51cf909f4279f337462cd980790",
-             api : "https://dictionary.yandex.net/api/v1/dicservice.json/lookup",
-             returned_text : ' ',
-             translate : function (id,callback){
-                 var text = id;
-                 var url = this.api+'?';
-                 var that = this;
+	var send_request_to_add = function(){		
+		var url = "http://localhost:3002/api/";
+        var playlist = "List_3";
+        var request_line = url + "playlist";
 
-                 url  +='key='+this.key;
-                 url+= '&lang=en-ru';
-                 url+= '&text='+text;
+        var data = "name="+playlist;
 
+        var xhr = new XMLHttpRequest();
+        xhr.withCredentials = true;
 
-                 var ajax = new XMLHttpRequest();
-                 ajax.open('GET',url,true);
-                 ajax.onreadystatechange = function(){
-                     if (ajax.readyState == 4){
-                         if(ajax.status == 200){
-                             that.lines[id] = text;
-                             text = ajax.responseText;
-                             text = JSON.parse(text);
-                             text = text.def[0].tr[0].text;
-                             var msg = new SpeechSynthesisUtterance(text);
-                             console.log('Supported keys list');
-                             window.speechSynthesis.speak(msg);
-                         }
-                     }
-                 };
-                 ajax.send(null);
-             },
-             revert : function(id){
-                 document.getElementById(id).innerHTML = this.lines[id];
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4 && this.status === 200) {
+                alert(this.responseText);
+            }
+        });
+        xhr.open("POST", request_line);
+        xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
 
-             }
-         };
+        xhr.send(data);
+
+	}; 
+	
+     send_request_to_add();
+	
+	
+	
+	
+	
+	// var word_list = [];
 	 
-	 
-	 var word_list = [];
-	 
-	 word_list = document.forms["Eng"].elements["EngW"].value.split("\n");
-	 var text = word_list[0];
-     text = yandex_translator.translate(text);
-     
-        
+	// word_list = document.forms["Eng"].elements["EngW"].value.split("\n");
+	 //var text = word_list[0];
+     //text = yandex_translator.translate(text);
+
+     //var url = "https://cors.io/?"+voice_mp3;
+     //get_mp3_sound(url);
 
          
 	/*var word_list = [];

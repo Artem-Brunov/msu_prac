@@ -6,6 +6,7 @@
 		<item value="org.eclipse.emf.common:2.11.1.v20160208-0816"/>
 		<item value="org.eclipse.emf.ecore:2.11.2.v20160208-0816"/>
 		<item value="org.eclipse.help:2.1.2.v20160212-1500"/>
+		<item value="org.eclipse.linuxtools.rpm.ui.editor.feature:0.4.3.201202152032"/>
 		<item value="org.eclipse.platform:4.5.2.v20160212-1500"/>
 		<item value="org.eclipse.rcp:4.5.2.v20160212-1500"/>
 		<item value="org.tizen.common.feature:2.0.0.201709042113"/>
@@ -14,6 +15,7 @@
 		<item value="org.tizen.efluibuilder.feature:1.0.0.201708212122"/>
 		<item value="org.tizen.nativeappcommon.feature:2.0.0.201708220902"/>
 		<item value="org.tizen.nativecommon.feature:2.0.0.201709210723"/>
+		<item value="org.tizen.nativeplatform.feature:1.0.0.201709041040"/>
 		<item value="org.tizen.profiler.feature:1.0.0.201709062040"/>
 		<item value="org.tizen.unittest.feature:2.0.0.201709060258"/>
 		<item value="org.tizen.web.feature:2.0.0.201709040814"/>
@@ -23,6 +25,6 @@
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="602" key="DIALOG_HEIGHT"/>
 		<item value="319" key="DIALOG_X_ORIGIN"/>
-		<item value="-17" key="DIALOG_Y_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

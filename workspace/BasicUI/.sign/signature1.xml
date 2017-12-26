@@ -152,7 +152,7 @@
 </Reference>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>nrwNwPhr9eLVlv94A5p8aBQe2EKLuag6VkfaoukFsdc=</DigestValue>
+<DigestValue>ubKivtvFEbeiwT/4RQ/YBdjNcm0oWjliv6JORbBEm7Q=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -184,15 +184,19 @@
 </Reference>
 <Reference URI="js%2FFastPlay.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>b9tpnTdVkYCkiBeYZwMBl/6/fiVzhpRVGzK/32hk5wc=</DigestValue>
+<DigestValue>dXPKgp+txH1XEu6zhzPKQy/kOICtm1i0/SJg8oNxAL8=</DigestValue>
+</Reference>
+<Reference URI="js%2FNewPlayList.js">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>HFRP7RuhSCZEVQCuIQDkgwtm/2H48NowdyOfEtTxFb8=</DigestValue>
+</Reference>
+<Reference URI="js%2FSelectPlaylist.js">
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
+<DigestValue>47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=</DigestValue>
 </Reference>
 <Reference URI="js%2Fmain.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>pr3YPrLFyPtaCRqMKwO/GuzC/cgMlddaJvvGYjAWQLg=</DigestValue>
-</Reference>
-<Reference URI="src%2Fbase_init.js">
-<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=</DigestValue>
 </Reference>
 <Reference URI="#prop">
 <Transforms>
@@ -203,11 +207,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-Z/9QjfyaMo/VZuzFc9Ujs5HyLPQizdPkXd3Ka5ijA0phY0Zpi1blP6xU2pIZ/LAAKUKJpN61RBFE
-fxESNOiH0H7oyYZMMBB5KBpfhnDuJbvAvgSHt6XlF2T/eBWxuYvGo4PuXHKvuOcv4x6gILeXB4DV
-gtI4C/HR5Tm+xu1cYndaxVffP3pP5+xXAwKkH/Y7bHtd6dwTFUSUTm6BFu9c1T2yxcO41VVYjJA9
-X550z5BH3GqTnncCaEQzsLIybAwhGSMTOQNiuFI9Li1rXIIqfRtO/39/ZxFP1I7WxCbFbtRnrhCo
-1zpNXxfvnNbG46OaBFh1oKDvZRbBZSziisWoVw==
+HKrgBOZzCqgf3gBxjmd8PuDAeUCKxZEhLw1GJRtQNO6v4u3pJOTGjY5P2lgS3HGSn23+FcjmyiIU
+4QQdlyzJZT2x7CM7UIVKmY19M+kerKuuoZf5/haLdA0bvMvOuWyQIv1r5N0x1PzmnpErqvEaitEk
+v/Sd6U4l7YnQFf8UE/XccRh6ZJeSGmBTAaVAU7fhOb2AzmqryR9FVodfwqzwUU+fhNgxqTbPcyyO
+kCioftxsmO7XKPMwDXG9L59tqD3r/YSA4XQNlCsGstebuG9g/b9sNk1KpY9zMBDCHy+wr8ImUE73
+0AyKrPNcLX0bqW7yQPmPcJSP5nLIab/insvYuQ==
 </SignatureValue>
 <KeyInfo>
 <X509Data>

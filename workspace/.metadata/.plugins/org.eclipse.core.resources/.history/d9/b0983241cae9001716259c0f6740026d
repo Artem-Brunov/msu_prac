@@ -1,0 +1,4 @@
+
+var listname = "List1"; // create playlist
+
+var new_word  = "pictute"; // add word to playlist List1

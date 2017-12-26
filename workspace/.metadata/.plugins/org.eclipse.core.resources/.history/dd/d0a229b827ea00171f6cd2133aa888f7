@@ -1,0 +1,29 @@
+
+var listname = "List1"; // create playlist
+
+var new_word  = "pictute"; // add word to playlist List1
+
+var create_playlist = function(listname){
+	var url = "http://localhost:3001/api/";
+	var playlist = listname;
+	var request_line = url+playlist;
+	var xml = new XMLHttpRequest();
+	xml.open('POST',request_line,true);
+
+	xml.onreadystatechange = function(){
+		if (xml.readyState === 4) {
+			if(xml.status === 200) {
+				alert(xml.response);
+			}
+            else {
+            	alert("status NOT 200_0");
+            	alert(xml.status);
+            }
+        }
+	};
+	xml.send();
+};
+
+var add_word_to_list = function(listname,word){
+	
+};

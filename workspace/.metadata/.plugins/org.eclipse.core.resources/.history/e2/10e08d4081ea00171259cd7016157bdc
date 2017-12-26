@@ -22,7 +22,7 @@
  	</form>
 </div>	
 	<div class = "Add">
-		<a  href = "NewWithTranslate.html" onClick = "create_playlist()" class = "first_button">NEXT</a>
+		<a  href = "#" onClick = "create_playlist()" class = "first_button">NEXT</a>
 	</div>
 	<div class = "BBack">
 			<a href = "index.html"><img src="images/Back.png" width="50" 

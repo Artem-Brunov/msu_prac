@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="description" content="Tizen Mobile Web Basic Template" />
 
@@ -11,22 +11,23 @@
     <script src = "js/NewPlayList.js"></script>
 </head>
 <body>
-<div class = "listn">
+	<div class = "listn">
 	<form name="test">
-  		<h3>Please enter List Name</h3>
-  		<p>
-   			<input id = pop type="text" size="21">
+  		<h3 align = "center">Please, enter the word</h3>
+  		<p align = "center">
+   			<input id = "bb" type="text" size="21">
   		</p>
  
   		
- 	</form>
+ 	
 </div>	
 	<div class = "Add">
-		<a  href = "NewWithTranslate.html" onClick = "create_playlist()" class = "first_button">NEXT</a>
+		<a href = "#"  onClick = "add_word_to_list()" onclick="form.reset()" class = "first_button">ADD</a>
 	</div>
-	<div class = "BBack">
-			<a href = "index.html"><img src="images/Back.png" width="50" 
-  height="50" alt="One step back"></a>
+	<div class = "Return">
+		<a href = "PLAY.html"  class = "first_button">LISTEN</a>
 	</div>
+	
+</div></form>
 </body>
 </html>
